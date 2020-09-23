@@ -1,0 +1,78 @@
+@import "../../../scss/index.scss";
+
+.signin{
+    background-color: $RM-dark-green;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+    &__content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+
+        &-logo{
+            padding: 60px 20px;
+            img{
+                @media(max-width: $s-tablet){
+                    width: 250px;
+                }
+            }
+        }
+
+        &-tabs{
+            background-color: $RM-white;
+            .ant-tabs{
+                width: 90vw;
+                @media(min-width: $s-laptop) {
+                    width: auto !important;
+                }
+            }
+            .ant-tabs-nav-container{
+                height: 60px !important;
+            }
+            .ant-tabs-nav{
+                width: 100%;
+            }
+            .ant-tabs-tab{
+                width: 50%;
+                height: 60px !important;
+                text-align: center;
+                font-size: 0em + 19px / $defaultFontSize;
+                border-top: 4px solid $RM-grey !important;
+                border-radius: 0 !important;
+                margin: 0 !important;
+                @media(min-width: $s-laptop){
+                    width: 220px !important;
+                    font-size: 0em + 23px / $defaultFontSize;
+                }
+                &:hover{
+                    color: $RM-dark-grey;
+                }
+                &:before{
+                    content:none;
+                }
+                span{
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+
+            .ant-tabs-tab-active {
+                color: $RM-green !important;
+                border-top: 4px solid $RM-green !important;
+                border-radius: 0 !important;
+                border-right: 0 !important;
+                border-left: 0 !important;
+            }
+
+            .ant-tabs-content{
+                padding: 0 16px 16px 16px;
+                text-align: center;
+            }
+        }
+    }
+}

@@ -8,6 +8,12 @@ $defaultFontSize: 16px;
 //font colors
 
 //institutional colors
+$RM-white: #ffffff;
+$RM-grey: #ebeded;
+$RM-green: #00D762;
+$RM-dark-green: #061f1f;
+$RM-red: #ff4550;
+$RM-dark-grey: #707070;
 
 //border colors
 
@@ -32,4 +38,10 @@ $pinterest: #e20020;
 $instagram: #9e41ae;
 
 //responsive screen sizes
-
+$s-4k: 2000px;
+$s-large: 1440px;
+$s-laptop: 1024px;
+$s-tablet: 768px;
+$s-phone: 425px;
+$s-phone-m: 375px;
+$s-phone-s: 320px;
