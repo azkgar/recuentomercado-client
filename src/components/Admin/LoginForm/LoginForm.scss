@@ -1,0 +1,54 @@
+@import "../../../scss/index.scss";
+
+.login-form{
+    .ant-form-item:last-of-type{
+        margin: 0;
+    }
+
+    &__input {
+        .ant-input-prefix{
+            .anticon{
+                font-size: 0em + 22px / $defaultFontSize;
+            }
+        }
+
+        input {
+            font-size: 0em + 20px / $defaultFontSize;
+            padding: 10px 10px 10px 20px !important;
+        }
+    }
+
+    &__button {
+        width: 100%;
+        font-size: 0em + 22px / $defaultFontSize;
+        background-color: $RM-dark-green;
+        color: $RM-white;
+        height: 42px;
+        margin-top: 20px;
+
+        &:hover{
+            background-color: $RM-green;
+            color: $RM-white;
+        }
+
+        &:focus,
+        &:active {
+            background-color: $RM-dark-green;
+            color: $RM-white;
+            border: 0;
+        }
+    }
+    .ant-input-affix-wrapper{
+        &:hover{
+            border-color: $RM-green;
+        }
+        &:focus{
+            border-color: $RM-green !important;
+        }
+    }
+
+    .ant-input-affix-wrapper-focused{
+        border-color: $RM-green;
+        box-shadow: none;
+    }
+}

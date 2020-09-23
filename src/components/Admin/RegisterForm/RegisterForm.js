@@ -153,6 +153,7 @@ export default function RegisterForm() {
                     name = "privacyPolicy"
                     checked = {inputs.privacyPolicy}
                     onChange ={inputValidation}
+                    className = "checkbox"
                 >
                     He leído y acepto el <a href = "/aviso-de-privacidad">aviso de privacidad</a>.
                 </Checkbox>
