@@ -1,7 +1,7 @@
 import React from "react";
 import {Link, withRouter} from "react-router-dom";
 import {Layout, Menu} from "antd";
-import {HomeOutlined, UserOutlined, MenuOutlined, FileOutlined, TagOutlined, VideoCameraOutlined, SoundOutlined} from "@ant-design/icons";
+import {HomeOutlined, UserOutlined, MenuOutlined, FileOutlined, TagOutlined, YoutubeOutlined, AudioOutlined} from "@ant-design/icons";
 
 import "./MenuSider.scss";
 
@@ -51,13 +51,13 @@ function MenuSider(props) {
                 </Menu.Item>
                 <Menu.Item key = "/admin/videos">
                     <Link to={"/admin/videos"}>
-                        <VideoCameraOutlined/>
+                        <YoutubeOutlined/>
                         <span className="nav-text">Videos</span>
                     </Link>
                 </Menu.Item>
                 <Menu.Item key = "/admin/podcast">
                     <Link to={"/admin/podcast"}>
-                        <SoundOutlined/>
+                        <AudioOutlined/>
                         <span className="nav-text">Podcast</span>
                     </Link>
                 </Menu.Item>
