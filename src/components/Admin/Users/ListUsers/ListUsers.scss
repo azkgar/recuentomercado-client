@@ -1,0 +1,54 @@
+@import "../../../../scss/index.scss";
+
+.list-users{
+    &__header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+
+        @media(max-width: $s-phone-m){
+            display: block;
+        }
+
+        &-switch{
+            display: flex;
+            align-items: center;
+
+            @media(max-width: $s-phone-m){
+                margin-bottom: 5%;
+            }
+            > button{
+                margin-right: 20px;
+            }
+        }
+    }
+
+    .users-active{
+        background-color: $RM-white;
+        padding: 10px 20px;
+
+        .ant-list-item-meta{
+            display:flex;
+            align-items: center;
+            &-description{
+                text-transform: lowercase;
+            }
+
+            @media(max-width: $s-phone){
+                margin-bottom: 5%;
+            }
+
+            @media(max-width: $s-phone-m){
+                display:block;
+                text-align: center;
+                &-avatar{
+                    padding-left: 5%;
+                }
+                &-description{
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+}

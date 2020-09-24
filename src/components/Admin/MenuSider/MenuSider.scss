@@ -1,0 +1,15 @@
+@import "../../../scss/index.scss";
+
+.admin-sider{
+    overflow: auto;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 65px;
+
+    .ant-menu{
+        .ant-menu-item-selected{
+            background-color: $RM-dark-green;
+        }
+    }
+}
