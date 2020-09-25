@@ -6,18 +6,32 @@
 
 .navbar{
 
+    overflow: hidden;
+    @media(max-width: $s-phone){
+        width: 100vw;
+    }
+
     .show-menu{
         display: block;
         position: absolute;
         width: 555px;
         height: 700px;
         transition: width 0.5s, height 0.5s ease-in;
+
+        @media(max-width: $s-phone){
+            width: 100vw;
+        }
     }
 
     .hide-menu{
         width: 106px;
         height: 106px;
         transition: width 0.5s, height 0.5s ease-out;
+
+        @media(max-width: $s-phone){
+            width: 85px;
+            height: 85px;
+        }
     }
 
     .show-text{
@@ -39,6 +53,11 @@
         background-color: $RM-dark-green;
         justify-content: center;
         align-items: center;
+
+        @media(max-width: $s-phone){
+            width: 85px;
+            height: 85px;
+        }
         
         .top{
             top: 38px;
@@ -52,6 +71,11 @@
             transform: rotateZ(0deg);
             transition: all 0.6s var(--animation-curve);
             z-index: 1;
+
+            @media(max-width: $s-phone){
+                top: 26px;
+                left: 22px;
+            }
         }
         .middle{
             top: 38px + 6px + 6px;
@@ -61,6 +85,11 @@
             background-color: $RM-white;
             position: absolute;
             cursor: pointer;
+
+            @media(max-width: $s-phone){
+                top: 40px;
+                left: 22px;
+            }
         }
         .bottom{
             top: 38px + 6px + 18px;
@@ -74,6 +103,11 @@
             transform: rotateZ(0deg);
             transition: all 0.6s var(--animation-curve);
             z-index: 1;
+
+            @media(max-width: $s-phone){
+                top: 54px;
+                left: 22px;
+            }
         }
 
         &:hover{
@@ -90,6 +124,10 @@
         #toggle:checked ~ .top{
             background-color: $RM-white;
             transform: rotateZ(41deg);
+
+            @media(max-width: $s-phone){
+                transform: rotateZ(47deg);
+            }
         }
 
         #toggle:checked ~ .middle{
@@ -100,6 +138,10 @@
             background-color: $RM-white;
             transform: rotateZ(-41deg);
             width: 40px;
+
+            @media(max-width: $s-phone){
+                transform: rotateZ(-47deg);
+            }
         }
 
         #toggle ~ .middle{
@@ -122,6 +164,14 @@
             li{
                 margin-right: 90px;
                 margin-bottom: 20px;
+
+                @media(max-width: $s-phone-m){
+                    margin-right: 75px;
+                }
+
+                @media(max-width: $s-phone-s){
+                    margin-right: 60px;
+                }
                 
                 a{
                     color: $RM-white;
@@ -141,12 +191,39 @@
         width: 449px;
         height: 106px;
         background-color: $RM-white;
+
+        @media(max-width: $s-phone){
+            width: calc(100vw - 85px);
+            height: 85px;
+            margin-left: 85px;
+        }
         
         .letters{
             width: 350px;
             height: auto;
             margin-left: 44px;
             margin-top: 35px;
+
+            @media(max-width: $s-phone){
+                width: 280px;
+                height: auto;
+                margin-left: 25px;
+                margin-top: 30px;
+            }
+
+            @media(max-width: $s-phone-m){
+                width: 255px;
+                height: auto;
+                margin-left: 25px;
+                margin-top: 30px;
+            }
+
+            @media(max-width: $s-phone-s){
+                width: 210px;
+                height: auto;
+                margin-left: 25px;
+                margin-top: 30px;
+            }
         }
 
         .icon{
@@ -155,7 +232,17 @@
             height: auto;
             top: -2px;
             right: 5px;
-            -webkit-transition: -webkit-transform 0.5s;
+            -webkit-transition: -webkit-transform 0.2s;
+
+            @media(max-width: $s-phone){
+                width: 16px;
+                height: auto;
+            }
+
+            @media(max-width: $s-phone-s){
+                width: 12px;
+                height: auto;
+            }
         }
 
         &:hover .icon{
