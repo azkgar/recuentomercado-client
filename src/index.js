@@ -7,6 +7,12 @@ import * as serviceWorker from './serviceWorker';
 import "./fonts/Objektiv Mk1 W03 Black.ttf";
 import "./fonts/Objektiv Mk1 W03 Regular.ttf";
 import "./fonts/Objektiv Mk1 W03 XBold.ttf";
+import {library} from "@fortawesome/fontawesome-svg-core";
+import {fab} from "@fortawesome/free-brands-svg-icons";
+import {far} from "@fortawesome/free-regular-svg-icons";
+import {fas} from "@fortawesome/free-solid-svg-icons";
+
+library.add(fab,far,fas);
 
 ReactDOM.render(
     <App />,

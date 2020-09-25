@@ -3,10 +3,14 @@
 @font-face{
   font-family: "ObjektivBlack";
   src: local("ObjektivBlack"), url("./fonts/Objektiv\ Mk1\ W03\ Black.ttf") format("truetype");
+}
 
+@font-face{
   font-family: "ObjektivRegular";
   src: local("ObjektivRegular"), url("./fonts/Objektiv\ Mk1\ W03\ Regular.ttf") format("truetype");
+}
 
+@font-face{
   font-family: "ObjektivXBold";
   src: local("ObjektivXBold"), url("./fonts/Objektiv\ Mk1\ W03\ XBold.ttf") format("truetype");
 }

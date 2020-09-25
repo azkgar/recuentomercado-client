@@ -1,0 +1,13 @@
+@import "../../../scss/index.scss";
+
+.news{
+
+    h4{
+        font-family: $titles-font;
+        font-size: 20px;
+    }
+    &__add-post {
+        text-align: right;
+        margin-bottom: 20px;
+    }
+}
