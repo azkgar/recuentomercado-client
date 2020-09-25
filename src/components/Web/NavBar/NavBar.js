@@ -1,8 +1,8 @@
 import React, {useState, useEffect, useRef} from "react";
 import {Link} from "react-router-dom";
-import {Menu} from "antd";
 import {getMenuApi} from "../../../api/menu";
-import Logo from "../../../assets/img/png/RM-logotipo_fondoblanco.png";
+import LogoLetras from "../../../assets/img/svg/RM-logo-letras.svg";
+import LogoIcono from "../../../assets/img/svg/RM-logo-icono.svg";
 
 import "./NavBar.scss";
 
@@ -44,9 +44,25 @@ export default function NavBar(){
     const showClass = isVisible ? "show-menu" : "hide-menu";
     const showText = isVisible ? "show-text" : "hide-text";
 
+    const classes = `navbar__hamburguer-menu ${showClass}`
+
     return(
         <div className = "navbar">
-            <div className = "navbar__hamburguer-menu" ref = {node}>
+            <div className = "navbar__logo">
+                <a href = "/">
+                    <img 
+                        src = {LogoLetras} 
+                        alt = "Logo el Recuento del Mercado" 
+                        className = "letters"
+                    />
+                    <img 
+                        src = {LogoIcono} 
+                        alt = "Logo el Recuento del Mercado" 
+                        className = "icon"
+                    />
+                </a>
+            </div>
+            <div className = {classes} ref = {node}>
                 <input
                     checked = {isVisible}
                     type = "checkbox"
@@ -66,7 +82,7 @@ export default function NavBar(){
                     htmlFor = "toggle"
                     className = "bottom"
                 ></label>
-                <Menu
+                <ul
                     className = {showClass}
                     mode = "vertical"
                 >
@@ -75,7 +91,7 @@ export default function NavBar(){
 
                         if(external) {
                             return(
-                                <Menu.Item
+                                <li
                                     key = {item._id}
                                     className = {showText}
                                     onClick = {visible}
@@ -87,12 +103,12 @@ export default function NavBar(){
                                     >
                                         {item.title}
                                     </a>
-                                </Menu.Item>
+                                </li>
                             );
                         }
 
                         return(
-                            <Menu.Item
+                            <li
                                 key = {item._id}
                                 className = {showText}
                                 onClick = {visible}
@@ -100,14 +116,11 @@ export default function NavBar(){
                                 <Link to = {item.url}>
                                     {item.title}
                                 </Link>
-                            </Menu.Item>
+                            </li>
                         );
                     })}
-                </Menu>
+                </ul>
             </div>
-            <a href = "/">
-                <img src = {Logo} alt = "Logo el Recuento del Mercado" />
-            </a>
         </div>
     );
 }
