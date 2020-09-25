@@ -4,6 +4,9 @@ import "antd/dist/antd.css"
 import './index.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import "./fonts/Objektiv Mk1 W03 Black.ttf";
+import "./fonts/Objektiv Mk1 W03 Regular.ttf";
+import "./fonts/Objektiv Mk1 W03 XBold.ttf";
 
 ReactDOM.render(
     <App />,

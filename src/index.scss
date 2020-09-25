@@ -1,5 +1,16 @@
 @import "./scss/index.scss";
 
+@font-face{
+  font-family: "ObjektivBlack";
+  src: local("ObjektivBlack"), url("./fonts/Objektiv\ Mk1\ W03\ Black.ttf") format("truetype");
+
+  font-family: "ObjektivRegular";
+  src: local("ObjektivRegular"), url("./fonts/Objektiv\ Mk1\ W03\ Regular.ttf") format("truetype");
+
+  font-family: "ObjektivXBold";
+  src: local("ObjektivXBold"), url("./fonts/Objektiv\ Mk1\ W03\ XBold.ttf") format("truetype");
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
