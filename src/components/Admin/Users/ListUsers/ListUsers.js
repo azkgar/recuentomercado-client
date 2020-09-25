@@ -43,6 +43,7 @@ export default function ListUsers(props) {
                     </span>
                 </div>
                 <Button
+                    className = "new-user-btn"
                     type = "primary"
                     onClick = {addUserModal}
                 >

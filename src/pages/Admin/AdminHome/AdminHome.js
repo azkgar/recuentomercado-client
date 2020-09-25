@@ -15,7 +15,7 @@ export default function AdminHome() {
             const {name} = metaToken;
             setUserName(name);
         }
-    });
+    }, []);
     
     return(
         <>

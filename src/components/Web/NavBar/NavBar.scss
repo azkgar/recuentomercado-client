@@ -1,0 +1,94 @@
+@import "../../../scss/index.scss";
+
+:root{
+    --animation-curve: cubic-bezier(1,0,0,1);
+}
+
+.navbar{
+    .show-menu{
+        display: block;
+    }
+
+    .hide-menu{
+        display: none;
+    }
+
+    &__hamburguer-menu{
+        width: 106px;
+        height: 106px;
+        background-color: $RM-dark-green;
+        justify-content: center;
+        align-items: center;
+        
+        .top{
+            top: 38px;
+            left: 33px;
+            width: 40px;
+            height: 6px;
+            background-color: $RM-white;
+            position: absolute;
+            cursor: pointer;
+            transform-origin: left top;
+            transform: rotateZ(0deg);
+            transition: all 0.6s var(--animation-curve);
+            z-index: 1;
+        }
+        .middle{
+            top: 38px + 6px + 6px;
+            left: 33px;
+            width: 40px;
+            height: 6px;
+            background-color: $RM-white;
+            position: absolute;
+            cursor: pointer;
+        }
+        .bottom{
+            top: 38px + 6px + 18px;
+            left: 33px;
+            width: 30px;
+            height: 6px;
+            background-color: $RM-white;
+            position: absolute;
+            cursor: pointer;
+            transform-origin: left bottom;
+            transform: rotateZ(0deg);
+            transition: all 0.6s var(--animation-curve);
+            z-index: 1;
+        }
+
+        &:hover{
+            .middle{
+                width:30px;
+            }
+
+            .bottom{
+                width: 40px;
+            }
+        }
+
+
+        #toggle:checked ~ .top{
+            background-color: $RM-red;
+            transform: rotateZ(41deg);
+        }
+
+        #toggle:checked ~ .middle{
+            background-color: $RM-dark-green;
+        }
+
+        #toggle:checked ~ .bottom{
+            background-color: $RM-red;
+            transform: rotateZ(-41deg);
+            width: 40px;
+        }
+
+        #toggle ~ .middle{
+            transition: all 0.5s var(--animation-curve);
+        }
+
+        input{
+            display: none;
+        }
+        
+    }
+}

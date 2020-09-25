@@ -1,0 +1,50 @@
+@import "../../../../scss/index.scss";
+
+.menu-web-list{
+    &__header {
+        display: flex;
+        text-align: center;
+        justify-content: flex-end;
+        margin-bottom: 20px;
+    }
+
+    &__items {
+        background-color: $RM-white;
+        padding: 10px 20px;
+
+        .List{
+            position: relative;
+
+            .draggable{
+                width: 100%;
+                background-color: rgba(255,255,255,0.5);
+                border-bottom: 1px solid rgba(0,0,0,0.1);
+
+                &:hover{
+                    cursor: pointer;
+                }
+
+                &.dragged{
+                    border: 1px solid #e2e2e2;
+                    padding: 0 10px;
+                }
+            }
+        }
+
+        .ant-list-item-meta{
+            display: flex;
+            align-items: center;
+
+            @media(max-width: $s-phone-m) {
+                text-align: center;
+                margin-bottom: 8%;
+            }
+        }
+
+        .ant-list-item-action{
+            @media(max-width: $s-phone-s){
+                margin-left: -8%;
+            }
+        }
+    }
+}

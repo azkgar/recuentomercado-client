@@ -9,7 +9,7 @@ export function getAccessTokenApi() {
         return null;
     }
 
-    return willExpireToken(accessToken) ? null :accessToken;
+    return willExpireToken(accessToken) ? null : accessToken;
 }
 
 export function getRefreshTokenApi() {

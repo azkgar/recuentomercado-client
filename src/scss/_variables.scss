@@ -1,11 +1,12 @@
 //import font styles
+@import url('https://fonts.googleapis.com/css2?family=Questrial&family=Syne:wght@400;600;700&display=swap');
 
 //font size
 $defaultFontSize: 16px;
 
 //font styles
-
-//font colors
+$titles-font: "Syne", "sans-serif";
+$body-font: "Questrial", "sans-serif";
 
 //institutional colors
 $RM-white: #ffffff;
@@ -14,8 +15,6 @@ $RM-green: #00D762;
 $RM-dark-green: #061f1f;
 $RM-red: #ff4550;
 $RM-dark-grey: #707070;
-
-//border colors
 
 //background colors
 $background-error: rgba(230,139,139,0.2);
@@ -36,6 +35,8 @@ $whatsapp-hover: #53b348;
 $messenger: #3499f7;
 $pinterest: #e20020;
 $instagram: #9e41ae;
+$spotify: #1dd155;
+$apple-podcast: #b538dd;
 
 //responsive screen sizes
 $s-4k: 2000px;

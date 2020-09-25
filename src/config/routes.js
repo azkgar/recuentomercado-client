@@ -1,12 +1,15 @@
 //Layout
 import LayoutAdmin from "../layouts/LayoutAdmin";
+import LayoutBasic from "../layouts/LayoutBasic";
 
 //Admin Pages
 import AdminHome from "../pages/Admin/AdminHome";
 import AdminSignIn from "../pages/Admin/SignIn";
 import AdminUsers from "../pages/Admin/Users";
+import AdminMenuWeb from "../pages/Admin/MenuWeb";
 
 //User Pages
+import Home from "../pages/Home";
 
 //Error Page
 
@@ -29,6 +32,23 @@ const routes = [
             {
                 path: "/admin/users",
                 component: AdminUsers,
+                exact: true
+            },
+            {
+                path: "/admin/menu",
+                component: AdminMenuWeb,
+                exact: true
+            }
+        ]
+    },
+    {
+        path: "/",
+        component: LayoutBasic,
+        exact: false,
+        routes: [
+            {
+                path: "/",
+                component: Home,
                 exact: true
             }
         ]
