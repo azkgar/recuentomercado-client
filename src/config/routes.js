@@ -8,6 +8,7 @@ import AdminSignIn from "../pages/Admin/SignIn";
 import AdminUsers from "../pages/Admin/Users";
 import AdminMenuWeb from "../pages/Admin/MenuWeb";
 import AdminNews from "../pages/Admin/News";
+import AdminCategories from "../pages/Admin/Categories";
 
 //User Pages
 import Home from "../pages/Home";
@@ -43,6 +44,11 @@ const routes = [
             {
                 path: "/admin/noticias",
                 component: AdminNews,
+                exact: true
+            },
+            {
+                path: "/admin/categorias",
+                component: AdminCategories,
                 exact: true
             }
         ]

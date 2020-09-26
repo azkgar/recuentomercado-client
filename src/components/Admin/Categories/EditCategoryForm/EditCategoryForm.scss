@@ -1,0 +1,22 @@
+@import "../../../../scss/index.scss";
+
+.edit-categories-form{
+    font-family: $titles-font;
+
+    .form-edit {
+        text-align: center;
+
+        .ant-form-item {
+            margin-top: 1%;
+            margin-bottom: 4%;
+
+            .anticon{
+                color: rgba(0,0,0,0.25);
+            }
+        }
+
+        .btn-submit{
+            width: 100%;
+        }
+    }
+}

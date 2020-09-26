@@ -18,6 +18,14 @@ export default function AddEditPostForm(props) {
     const [categories, setCategories] = useState([]);
     const token = getAccessTokenApi();
 
+    useEffect(()=>{
+        if(post){
+            setPostData(post);
+        } else {
+            setPostData({});
+        }
+    },[post]);
+
     useEffect(() => {
         getUsersActiveApi(token, true)
         .then(response => {
