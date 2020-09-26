@@ -233,6 +233,12 @@
                 margin-left: 25px;
                 margin-top: 30px;
             }
+
+            @media(max-width: $s-phone-xs){
+                width: 200px;
+                height: auto;
+                margin-left: 15px;
+            }
         }
 
         .icon{
