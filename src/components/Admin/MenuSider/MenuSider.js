@@ -55,10 +55,10 @@ function MenuSider(props) {
                         <span className="nav-text">Videos</span>
                     </Link>
                 </Menu.Item>
-                <Menu.Item key = "/admin/podcast">
-                    <Link to={"/admin/podcast"}>
+                <Menu.Item key = "/admin/podcasts">
+                    <Link to={"/admin/podcasts"}>
                         <AudioOutlined/>
-                        <span className="nav-text">Podcast</span>
+                        <span className="nav-text">Podcasts</span>
                     </Link>
                 </Menu.Item>
             </Menu>

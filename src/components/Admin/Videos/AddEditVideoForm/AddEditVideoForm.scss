@@ -1,0 +1,36 @@
+@import "../../../../scss/index.scss";
+
+.add-edit-video-form {
+    text-align: center;
+
+    .ant-form-item {
+        margin-top: 5px;
+        margin-bottom: 5px;
+
+        @media(max-width: $s-phone-m) {
+            display: block;
+        }
+
+        .anticon {
+            color: rgba(0,0,0,0.25);
+        }
+    
+        .categories{
+            margin-top: 5px;
+        }
+    
+        .cover-image{
+            margin-top: 5px;
+        }
+    
+        .video-link {
+            .video {
+                color: rgba(0,0,0,0.25);
+            }
+        }
+    }
+
+    .btn-submit {
+        width: 100%
+    }
+}

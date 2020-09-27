@@ -9,6 +9,8 @@ import AdminUsers from "../pages/Admin/Users";
 import AdminMenuWeb from "../pages/Admin/MenuWeb";
 import AdminNews from "../pages/Admin/News";
 import AdminCategories from "../pages/Admin/Categories";
+import AdminVideos from "../pages/Admin/Videos";
+import AdminPodcasts from "../pages/Admin/Podcasts";
 
 //User Pages
 import Home from "../pages/Home";
@@ -49,6 +51,16 @@ const routes = [
             {
                 path: "/admin/categorias",
                 component: AdminCategories,
+                exact: true
+            },
+            {
+                path: "/admin/podcasts",
+                component: AdminPodcasts,
+                exact: true
+            },
+            {
+                path: "/admin/videos",
+                component: AdminVideos,
                 exact: true
             }
         ]
