@@ -10,12 +10,12 @@
     100%{-webkit-transform: rotate(360deg);}
 }
 
-img.logo-spin{
+.logo-spin{
     position: absolute;
     height: 80px;
     width: 80px;
-    top: calc(100vh / 2);
-    left: calc(100vw / 2);
+    top: 50%;
+    left: calc(50% - 40px);
     -webkit-animation: spin 1s linear infinite;
     -moz-animation: spin 1s linear infinite;
     animation: spin 1s linear infinite;
