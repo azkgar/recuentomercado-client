@@ -1,5 +1,26 @@
 @import "../../../scss/index.scss";
 
+@-webkit-keyframes spin{
+    100%{-webkit-transform: rotate(360deg);}
+}
+@-moz-keyframes spin{
+    100%{-webkit-transform: rotate(360deg);}
+}
+@keyframes spin{
+    100%{-webkit-transform: rotate(360deg);}
+}
+
+img.logo-spin{
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    top: calc(100vh / 2);
+    left: calc(100vw / 2);
+    -webkit-animation: spin 1s linear infinite;
+    -moz-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+}
+
 .main-banner{
     width: 100vw;
     height: 940px;

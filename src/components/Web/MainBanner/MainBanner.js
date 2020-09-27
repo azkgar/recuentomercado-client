@@ -1,11 +1,13 @@
 import React, {useState, useEffect} from "react";
 import {getPostsApi} from "../../../api/post";
 import {Link} from "react-router-dom";
+import {Spin} from "antd";
+import Icono from "../../../assets/img/svg/RM-logo-icono.svg";
 
 import "./MainBanner.scss";
 
 export default function MainBanner() {
-    const [posts, setPosts] = useState([]);
+    const [posts, setPosts] = useState();
     const [current, setCurrent] = useState(0);
     const page = 1;
 
@@ -43,6 +45,16 @@ export default function MainBanner() {
     const carouselFill3 = "carousel-right filled";
     const carouselEmpty3 = "carousel-right empty";
 
+    if(!posts){
+        return(
+            
+            <img
+                className = "logo-spin"
+                src = {Icono}
+            />
+        )
+    }
+
     return(
         <div className = "main-banner">
             {posts.map((post, index) => {
@@ -55,7 +67,7 @@ export default function MainBanner() {
                     />
                 );
             })}
-            <div className = "filter"></div>
+            <div className = {posts ? "filter" : "hide-text"}></div>
             {posts.map((post, index) => {
                 return(
                     <h1
