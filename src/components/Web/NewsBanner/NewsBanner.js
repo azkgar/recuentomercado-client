@@ -10,8 +10,8 @@ import "./NewsBanner.scss";
 
 export default function NewsBanner() {
     const [posts, setPosts] = useState();
-    const [firstRow, setFirstRow] = useState();
-    const [secondRow, setSecondRow] = useState();
+    //const [firstRow, setFirstRow] = useState();
+    //const [secondRow, setSecondRow] = useState();
     const page = 1;
 
     useEffect(()=>{
@@ -26,6 +26,7 @@ export default function NewsBanner() {
             <img
                 className = "logo-spin"
                 src = {Icono}
+                alt = "Cargando"
             />
         )
     }
@@ -42,7 +43,7 @@ export default function NewsBanner() {
                     const year = moment(post.date).format("YYYY");
 
                     return(
-                        <Col span = {8} key = {post._id}>
+                        <Col xl = {8} lg = {12} md = {12} sm = {24} xs = {24} key = {post._id}>
                             <Link to = {`/noticias/${post.url}`}>
                                 <div className = "news-card">
                                     <img

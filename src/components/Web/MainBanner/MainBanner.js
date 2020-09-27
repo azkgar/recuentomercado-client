@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from "react";
 import {getPostsApi} from "../../../api/post";
 import {Link} from "react-router-dom";
-import {Spin} from "antd";
 import Icono from "../../../assets/img/svg/RM-logo-icono.svg";
 
 import "./MainBanner.scss";
@@ -51,6 +50,7 @@ export default function MainBanner() {
             <img
                 className = "logo-spin"
                 src = {Icono}
+                alt = "Cargando"
             />
         )
     }

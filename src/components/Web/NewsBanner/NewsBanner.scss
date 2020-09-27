@@ -25,10 +25,16 @@
     padding-left: 200px;
     padding-right: 200px;
     padding-bottom: 100px;
+    overflow: hidden;
 
     @media (max-width: $s-laptop){
         padding-left: 100px;
         padding-right: 100px;
+    }
+
+    @media (max-width: $s-phone){
+        padding-left: 30px;
+        padding-right: 30px;
     }
 
     h2{
@@ -36,6 +42,18 @@
         font-family: $titles-font;
         font-size: 40px;
         margin-bottom: 90px;
+
+        @media(max-width: $s-phone){
+            font-size: 35px;
+        }
+
+        @media(max-width: $s-phone-s){
+            font-size: 30px;
+        }
+
+        @media(max-width: $s-phone-xs){
+            font-size: 25px;
+        }
     }
 
     .news-card{
@@ -45,6 +63,18 @@
         background-color: $RM-white;
         box-shadow: 0 14px 26px rgba(0,0,0,0.04);
         transition: all 0.3s ease-out;
+
+        @media(max-width: $s-large){
+            width: calc((100vw / 3) - 150px);
+        }
+
+        @media(max-width: $s-laptop){
+            width: calc((100vw / 2) - 100px);
+        }
+
+        @media(max-width: $s-phone){
+            width: 100%;
+        }
     }
 
     .news-card:hover{
@@ -55,6 +85,10 @@
     .news-cover{
         width: 100%;
         height: 240px;
+
+        @media(max-width: $s-large){
+            height: 200px;
+        }
     }
 
     .news-title{
@@ -63,6 +97,20 @@
         margin-top: 32px;
         font-family: $titles-font;
         font-size: 24px;
+
+        @media(max-width: $s-large){
+            font-size: 20px;
+            padding-left: 35px;
+            padding-right: 60px;
+        }
+
+        @media(max-width: $s-tablet){
+            font-size: 18px;
+        }
+
+        @media(max-width: $s-phone-xs){
+            font-size: 15px;
+        }
     }
 
     .news-content{
@@ -73,6 +121,19 @@
         font-family: $body-font;
         font-size: 16px;
         color: $RM-dark-green;
+
+        @media(max-width: $s-large){
+            font-size: 14px;
+            padding-left: 35px;
+            padding-right: 35px;
+        }
+        @media(max-width: $s-tablet){
+            margin-top: 20px;
+        }
+
+        @media(max-width: $s-phone-xs){
+            font-size: 12px;
+        }
     }
 
     .news-date{
@@ -81,6 +142,18 @@
         font-family: $titles-font;
         font-size: 12px;
         color: $RM-dark-grey;
+
+        @media(max-width: $s-large){
+            padding-left: 35px;
+        }
+
+        @media(max-width: $s-tablet){
+            margin-top: 50px;
+        }
+
+        @media(max-width: $s-phone-xs){
+            font-size: 10px;
+        }
     }
 
     .news-button{
@@ -94,6 +167,49 @@
         border: none;
         outline: none;
         cursor: pointer;
+
+        @media(max-width: $s-large){
+            left: calc((100vw / 3) - 194px)
+        }
+
+        @media(max-width: $s-laptop){
+            left: calc((100vw / 2) - 144px);
+        }
+
+        @media(max-width: $s-phone){
+            left: 84.5vw;
+        }
+
+        @media(max-width: $s-phone-m){
+            left: 75vw;
+        }
+        @media(max-width: $s-phone-s){
+            left: 72.5vw;
+        }
+
+        @media(max-width: $s-phone-xs){
+            left: 67.5vw;
+        }
+
+        @media(width:736px){
+            left: 632px;
+        }
+
+        @media(width:731px){
+            left: 627px;
+        }
+
+        @media(width:640px){
+            left: 536px;
+        }
+
+        @media(width: 568px){
+            left: 465px;
+        }
+
+        @media(width: 360px){
+            left: 256px;
+        }
     }
 
     .news-arrow{

@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useCallback} from "react";
+import React, {useState, useEffect} from "react";
 import { Form, Input, Button, notification} from "antd";
 import {TagOutlined, FileImageOutlined} from "@ant-design/icons";
 import {updateCategoryApi} from "../../../../api/category";
@@ -27,7 +27,7 @@ export default function EditCategoryForm(props) {
         if(avatar) {
             setCategoriesData({...categoriesData, avatar: avatar});
         }
-    }, [avatar]);
+    }, [avatar, categoriesData]);
 
     const editCategory = event => {
         event.preventDefault();
