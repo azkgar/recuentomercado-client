@@ -1,0 +1,483 @@
+@import "../../../scss/index.scss";
+
+@-webkit-keyframes spin{
+    100%{-webkit-transform: rotate(360deg);}
+}
+@-moz-keyframes spin{
+    100%{-webkit-transform: rotate(360deg);}
+}
+@keyframes spin{
+    100%{-webkit-transform: rotate(360deg);}
+}
+
+.logo-spin{
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    top: 50%;
+    left: calc(50% - 40px);
+    -webkit-animation: spin 1s linear infinite;
+    -moz-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+}
+
+.podcast-banner{
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-bottom: 100px;
+    overflow: hidden;
+    position: relative;
+
+    @media (max-width: $s-laptop){
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+    @media (max-width: $s-phone){
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 180px;
+    }
+
+    h2{
+        margin-top: 85px;
+        margin-bottom: 85px;
+        font-family: $titles-font;
+        font-size: 40px;
+        margin-bottom: 90px;
+        color: $RM-dark-green;
+
+        @media(max-width: $s-phone){
+            font-size: 35px;
+        }
+
+        @media(max-width: $s-phone-s){
+            font-size: 30px;
+        }
+
+        @media(max-width: $s-phone-xs){
+            font-size: 25px;
+        }
+    }
+
+    &__list{
+        &-left{
+            width: 742px;
+            height: 355px;
+            display: inline-block;
+            position: relative;
+            margin-right: 31px;
+            margin-bottom: 90px;
+            background-color: $RM-dark-green;
+
+            //@media(max-width: $s-large){
+            //    width: 230px;
+            //    height: auto;
+            //}
+
+            //@media (max-width: $s-laptop){
+            //    width: 370px;
+            //    height: auto;
+            //    margin-right: 42px;
+            //}
+
+            //@media(max-width: $s-tablet){
+            //    width: 100%;
+            //    height: auto;
+            //}
+
+            //@media(max-width: $s-phone){
+            //    margin-bottom: 20px;
+            //}
+
+            //@media(width: 1366px){
+            //    width:210px;
+            //    height: auto;
+            //}
+        }
+
+        &-right{
+            width: 742px;
+            height: 355px;
+            display: inline-block;
+            position: relative;
+            margin-right: 0;
+            margin-bottom: 90px;
+            background-color: $RM-dark-green;
+
+            //@media(max-width: $s-large){
+            //    width: 230px;
+            //    height: auto;
+            //}
+
+            //@media (max-width: $s-laptop){
+            //    width: 370px;
+            //    height: auto;
+            //    margin-right: 42px;
+            //}
+
+            //@media(max-width: $s-tablet){
+            //    width: 100%;
+            //    height: auto;
+            //}
+
+            //@media(max-width: $s-phone){
+            //    margin-bottom: 20px;
+            //}
+
+            //@media(width: 1366px){
+            //    width:210px;
+            //    height: auto;
+            //}
+        }
+
+        &-cover{
+            width: 355px;
+            height: 355px;
+        }
+
+        &-description{
+            &-text{
+                position: absolute;
+                top: 56px;
+                left: 409px;
+                width: 280px;
+                color: $RM-white;
+                font-family: $body-font;
+                font-size: 16px;;
+            }
+
+            &-button{
+                position: absolute;
+                bottom: 45px;
+                left: 409px;
+                width:216px;
+                height: 56px;
+                background-color: $RM-white;
+                color: $RM-dark-green;
+                text-transform: uppercase;
+                font-family: $titles-font;
+                font-size: 16px;
+                cursor: pointer;
+                text-align: left;
+                padding-left: 30px;
+                border-style: none;
+                border: none;
+                outline: none;
+
+                transition: width 0.3s ease-out;
+                
+                .listen-arrow{
+                    width: 40px;
+                    height: 2px;
+                    background-color: $RM-dark-green;
+                    position: absolute;
+                    top: 27px;
+                    left: 140px;
+                    transition: width 0.3s ease-out;
+
+                    &:after{
+                        content: "";
+                        display: inline-block;
+                        width: 10px;
+                        height: 2px;
+                        background-color: $RM-dark-green;
+                        transform: rotate(45deg);
+                        position: absolute;
+                        top: -3px;
+                        left: 32px;
+                        transition: left 0.3s ease-out;
+                    }
+
+                    &:before{
+                        content: "";
+                        display: inline-block;
+                        width: 10px;
+                        height: 2px;
+                        background-color: $RM-dark-green;
+                        transform: rotate(-45deg);
+                        position: absolute;
+                        top: 3px;
+                        left: 32px;
+                        transition: left 0.3s ease-out;
+                    }
+                }
+
+                &:hover{
+                    width: 251px;
+                    transition: width 0.2s ease-in;
+        
+                    .listen-arrow{
+                        width: 75px;
+                        transition: width 0.2s ease-in;
+        
+                        &:after{
+                            left: 67px;
+                            transition: left 0.2s ease-in;
+                        }
+        
+                        &:before{
+                            left: 67px;
+                            transition: left 0.2s ease-in;
+                        }
+                    } 
+                }
+            }
+        }
+    }
+
+    &__button{
+        position: relative;
+        display: inline-block;
+        width: 255px;
+        height: 56px;
+        background-color: $RM-dark-green;
+        color: $RM-white;
+        text-transform: uppercase;
+        font-family: $titles-font;
+        font-size: 16px;
+        cursor: pointer;
+        text-align: left;
+        padding-left: 30px;
+        border-style: none;
+        border: none;
+        outline: none;
+
+        transition: width 0.3s ease-out;
+
+        @media(max-width: $s-phone){
+            position: absolute;
+            bottom: 80px;
+        }
+
+            .read-arrow{
+                width: 40px;
+                height: 2px;
+                background-color: $RM-white;
+                position: absolute;
+                top: 27px;
+                left: 183px;
+                transition: width 0.3s ease-out;
+
+            &:after{
+                content: "";
+                display: inline-block;
+                width: 10px;
+                height: 2px;
+                background-color: $RM-white;
+                transform: rotate(45deg);
+                position: absolute;
+                top: -3px;
+                left: 32px;
+                transition: left 0.3s ease-out;
+            }
+
+            &:before{
+                content: "";
+                display: inline-block;
+                width: 10px;
+                height: 2px;
+                background-color: $RM-white;
+                transform: rotate(-45deg);
+                position: absolute;
+                top: 3px;
+                left: 32px;
+                transition: left 0.3s ease-out;
+            }
+        }
+
+        &:hover{
+            width: 290px;
+            transition: width 0.2s ease-in;
+
+            .read-arrow{
+                width: 75px;
+                transition: width 0.2s ease-in;
+
+                &:after{
+                    left: 67px;
+                    transition: left 0.2s ease-in;
+                }
+
+                &:before{
+                    left: 67px;
+                    transition: left 0.2s ease-in;
+                }
+            }
+        }
+    }
+
+    &__carousel{
+        width: 228px;
+        height: 56px;
+        position: absolute;
+        right: 200px;
+        bottom: 95px;
+        
+        @media(max-width: $s-laptop){
+            bottom: 102px;
+            right: 100px;
+        }
+
+        @media(max-width: $s-phone){
+            position: relative;
+            right: 0;
+            bottom: 0;
+            margin-right: auto;
+            margin-left: auto;
+            margin-bottom: 30px;
+        }
+
+        .carousel-left{
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            top: 22px;
+        }
+
+        .carousel-center1{
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            top: 22px;
+            left: 28px;
+        }
+
+        .carousel-center2{
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            top: 22px;
+            left: 56px;
+        }
+
+        .carousel-right{
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            top: 22px;
+            left: 84px;
+        }
+
+        .filled{
+            background-color: $RM-dark-green;
+        }
+        .empty{
+            border-style: solid;
+            border-color: $RM-dark-green;
+            border-width: 2px;
+        }
+
+        .prev-button{
+            position: absolute;
+            width: 56px;
+            height: 56px;
+            left: 116px;
+            border-style: none;
+            border: none;
+            outline: none;
+            background-color: $RM-dark-green;
+            cursor: pointer;
+
+            .prev-arrow{
+                position: absolute;
+                width: 19px;
+                height: 2px;
+                background-color: $RM-white;
+                top: 27px;
+                left: 18px;
+                transition: left 0.3s, width 0.2s ease-out;
+                
+                &:after{
+                    content: "";
+                    display: inline-block;
+                    width: 10px;
+                    height: 2px;
+                    background-color: $RM-white;
+                    transform: rotate(-45deg);
+                    position: absolute;
+                    top: -3px;
+                    left: -3px;
+                    transition: left 0.3s ease-out;
+                }
+
+                &:before{
+                    content: "";
+                    display: inline-block;
+                    width: 10px;
+                    height: 2px;
+                    background-color: $RM-white;
+                    transform: rotate(45deg);
+                    position: absolute;
+                    top: 3px;
+                    left: -3px;
+                    transition: left 0.3s ease-out;
+                }
+            }
+
+            &:hover{
+                .prev-arrow{
+                    width: 34px;
+                    left: 11px;
+                    transition: left 0.2s, width 0.1s ease-in;
+                }
+            }
+        }
+
+        .next-button{
+            position: absolute;
+            width: 56px;
+            height: 56px;
+            left: 172px;
+            border-style: none;
+            border: none;
+            outline: none;
+            background-color: $RM-dark-green;
+            cursor: pointer;
+
+            .next-arrow{
+                position: absolute;
+                width: 19px;
+                height: 2px;
+                background-color: $RM-white;
+                top: 27px;
+                left: 18px;
+                transition: left 0.3s, width 0.2s ease-out;
+                
+                &:after{
+                    content: "";
+                    display: inline-block;
+                    width: 10px;
+                    height: 2px;
+                    background-color: $RM-white;
+                    transform: rotate(45deg);
+                    position: absolute;
+                    top: -3px;
+                    right: -3px;
+                    transition: left 0.3s ease-out;
+                }
+
+                &:before{
+                    content: "";
+                    display: inline-block;
+                    width: 10px;
+                    height: 2px;
+                    background-color: $RM-white;
+                    transform: rotate(-45deg);
+                    position: absolute;
+                    top: 3px;
+                    right: -3px;
+                    transition: left 0.3s ease-out;
+                }
+            }
+
+            &:hover{
+                .next-arrow{
+                    width: 34px;
+                    left: 11px;
+                    transition: left 0.2s, width 0.1s ease-in;
+                }
+            }
+        }
+    }    
+}

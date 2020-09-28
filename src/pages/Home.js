@@ -4,6 +4,7 @@ import ReactGa from "react-ga";
 import MainBanner from "../components/Web/MainBanner";
 import NewsBanner from "../components/Web/NewsBanner";
 import VideosBanner from "../components/Web/VideosBanner";
+import PodcastBanner from "../components/Web/PodcastBanner";
 
 export default function Home() {
     return(
@@ -70,6 +71,7 @@ export default function Home() {
             <MainBanner/>
             <NewsBanner/>
             <VideosBanner/>
+            <PodcastBanner/>
         </>
     );
 }

@@ -1,19 +1,19 @@
 import React, {useState, useEffect} from "react";
 import {Link} from "react-router-dom";
-import {getVideosApi} from "../../../api/video";
+import {getPodcastsApi} from "../../../api/podcast";
 import Icono from "../../../assets/img/svg/RM-logo-icono.svg";
 
-import "./VideosBanner.scss";
+import "./PodcastBanner.scss";
 
-export default function VideosBanner() {
-    const [videos, setVideos] = useState();
+export default function PodcastBanner() {
+    const [podcasts, setPodcasts] = useState();
     const [page, setPage] = useState(1);
 
     useEffect(() => {
-        getVideosApi(5,page)
+        getPodcastsApi(2,page)
         .then(response => {
-            setVideos(response.videos.docs);
-            if(!response.videos.docs.length){
+            setPodcasts(response.podcasts.docs);
+            if(!response.podcasts.docs.length){
                 setPage(1);
             }
         });
@@ -49,7 +49,7 @@ export default function VideosBanner() {
     const carouselFill4 = "carousel-right filled";
     const carouselEmpty4 = "carousel-right empty";
 
-    if(!videos){
+    if(!podcasts){
         return(
             <img
                 className = "logo-spin"
@@ -60,55 +60,48 @@ export default function VideosBanner() {
     }
 
     return(
-        <div className = "videos-banner">
+        <div className = "podcast-banner">
             <h2>
-                Video blogs
+                Podcast
             </h2>
-            {videos.map((video, index) =>{
-                if(index === 0){
-                    return(
-                        <Link to = {`/videos/${video.url}`} key = {video._id}>
-                            <div className = "videos-banner__main">
-                                <img
-                                    className = "videos-banner__main-cover"
-                                    src = {video.cover}
-                                    alt = {`Portadad del video ${video.title}`}
-                                />
-                                <h3 className = "videos-banner__main-title">
-                                    {video.title}
-                                </h3>
-                                <p className = "videos-banner__main-description">
-                                    {video.description}
-                                </p>
-                            </div>
+            {podcasts.map((podcast, index) =>{
+                return(
+                    <div 
+                        className = {index === 0 ? "podcast-banner__list-left" : "podcast-banner__list-right"}
+                        key = {podcast._id}
+                    >
+                        <Link to = {`/podcast/${podcast.url}`}>
+                            <img
+                                className = "podcast-banner__list-cover"
+                                src = {podcast.cover}
+                                alt = {`Portada del podcast ${podcast.title}`}
+                            />
                         </Link>
-                    );
-                } else {
-                    return(
-                        <div 
-                            className = "videos-banner__list"
-                            key = {video._id}
-                        >
-                            <Link to = {`/videos/${video.url}`}>
-                                <img
-                                    className = "videos-banner__list-cover"
-                                    src = {video.cover}
-                                    alt = {`Portadad del video ${video.title}`}
-                                />
+                        <div className = "podcast-banner__list-description">
+                            <p className = "podcast-banner__list-description-text">
+                                {podcast.description}
+                            </p>
+                            <Link to = {`/podcast/${podcast.url}`}>
+                                <button
+                                    className = "podcast-banner__list-description-button"
+                                >
+                                    Escuchar
+                                    <div className = "listen-arrow"></div>
+                                </button>
                             </Link>
                         </div>
-                    );
-                }
+                    </div>
+                );
             })}
-            <Link to = "/videos">
+            <Link to = "/podcast">
                 <button
-                    className = "videos-banner__button"
+                    className = "podcast-banner__button"
                 >
-                    Más videos
+                    Más podcasts
                     <div className = "read-arrow"></div>
                 </button>
             </Link>
-            <div className = "videos-banner__carousel">
+            <div className = "podcast-banner__carousel">
                 <div
                     className = {page === 1 ? carouselFill1 : carouselEmpty1}
                 ></div>
