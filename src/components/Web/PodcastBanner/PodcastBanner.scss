@@ -69,6 +69,13 @@
             margin-right: 31px;
             margin-bottom: 90px;
             background-color: $RM-dark-green;
+            box-shadow: 0 14px 26px rgba(0,0,0,0.1);
+            transition: all 0.3s ease-out;
+
+            &:hover{
+                transform: translateY(-5px) scale(1.005) translateZ(0);
+                box-shadow: 0 24px 36px rgba(0,0,0,0.2);
+            }
 
             @media(max-width: $s-large){
                 width: 490px;
@@ -122,6 +129,13 @@
             margin-right: 0;
             margin-bottom: 90px;
             background-color: $RM-dark-green;
+            box-shadow: 0 14px 26px rgba(0,0,0,0.1);
+            transition: all 0.3s ease-out;
+
+            &:hover{
+                transform: translateY(-5px) scale(1.005) translateZ(0);
+                box-shadow: 0 24px 36px rgba(0,0,0,0.2);
+            }
 
             @media(min-width: $s-4k){
                 margin-right: 50px;

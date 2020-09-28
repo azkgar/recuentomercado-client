@@ -73,6 +73,13 @@
             display: inline-block;
             width: 1000px;
             height: 560px;
+            box-shadow: 0 14px 26px rgba(255,255,255,0.04);
+            transition: all 0.3s ease-out;
+
+            &:hover{
+                transform: translateY(-5px) scale(1.005) translateZ(0);
+                box-shadow: 0 24px 36px rgba(255,255,255,0.11);
+            }
 
             @media(max-width: $s-large){
                 width: 700px;
@@ -174,6 +181,13 @@
         display: inline-block;
         margin-right: 30px;
         margin-bottom: 90px;
+        box-shadow: 0 14px 26px rgba(255,255,255,0.04);
+        transition: all 0.3s ease-out;
+
+            &:hover{
+                transform: translateY(-5px) scale(1.005) translateZ(0);
+                box-shadow: 0 24px 36px rgba(255,255,255,0.11);
+            }
 
         @media(max-width: $s-large){
             width: 230px;
