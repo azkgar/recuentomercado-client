@@ -37,6 +37,7 @@
     @media (max-width: $s-phone){
         padding-left: 30px;
         padding-right: 30px;
+        padding-bottom: 180px;
     }
 
     h2{
@@ -64,10 +65,29 @@
         position: relative;
         padding-bottom: 65px;
 
+        @media(max-width: $s-laptop){
+            padding-bottom: 15px;
+        }
+
         &-cover{
             display: inline-block;
             width: 1000px;
             height: 560px;
+
+            @media(max-width: $s-large){
+                width: 700px;
+                height: 392px;
+            }
+
+            @media(max-width: $s-laptop){
+                width: 100%;
+                height: auto;
+            }
+
+            @media(width: 1366px){
+                width:600px;
+                height: auto;
+            }
         }
 
         &-title{
@@ -82,13 +102,26 @@
             color: $RM-white;
 
             @media(max-width: $s-large){
-                font-size: 20px;
-                //padding-left: 35px;
-                //padding-right: 60px;
+                font-size: 25px;
+                top: 50px;
+                width: 300px;
+            }
+
+            @media(max-width: $s-laptop){
+                width: 100%;
+                height: 80px;
+                text-align: center;
+                position: relative;
+                top: 25px;
+                margin-left: 0;
             }
 
             @media(max-width: $s-tablet){
                 font-size: 18px;
+            }
+
+            @media(max-width: $s-phone){
+                margin-bottom: 20px;
             }
 
             @media(max-width: $s-phone-xs){
@@ -109,12 +142,24 @@
 
             @media(max-width: $s-large){
                 font-size: 14px;
-                //padding-left: 35px;
-                //padding-right: 35px;
+                top: 190px;
+                width: 300px;
             }
+
+            @media(max-width: $s-laptop){
+                width: 100%;
+                height: 90px;
+                position: relative;
+                margin-left: 0;
+                top: 0;
+            }
+
             @media(max-width: $s-tablet){
-                //margin-top: 20px;
                 font-size: 14px;
+            }
+
+            @media(max-width: $s-phone){
+                margin-bottom: 20px;
             }
     
             @media(max-width: $s-phone-xs){
@@ -130,9 +175,34 @@
         margin-right: 30px;
         margin-bottom: 90px;
 
+        @media(max-width: $s-large){
+            width: 230px;
+            height: auto;
+        }
+
+        @media (max-width: $s-laptop){
+            width: 370px;
+            height: auto;
+            margin-right: 42px;
+        }
+
+        @media(max-width: $s-tablet){
+            width: 100%;
+            height: auto;
+        }
+
+        @media(max-width: $s-phone){
+            margin-bottom: 20px;
+        }
+
+        @media(width: 1366px){
+            width:210px;
+            height: auto;
+        }
+
         &-cover{
-            width: 350px;
-            height: 200px;
+            width: 100%;
+            height: 100%;
         }
     }
 
@@ -154,6 +224,11 @@
         outline: none;
 
         transition: width 0.3s ease-out;
+
+        @media(max-width: $s-phone){
+            position: absolute;
+            bottom: 80px;
+        }
 
         .read-arrow{
             width: 40px;
@@ -218,7 +293,20 @@
         position: absolute;
         right: 200px;
         bottom: 95px;
-        //top: 1310px;
+        
+        @media(max-width: $s-laptop){
+            bottom: 102px;
+            right: 100px;
+        }
+
+        @media(max-width: $s-phone){
+            position: relative;
+            right: 0;
+            bottom: 0;
+            margin-right: auto;
+            margin-left: auto;
+            margin-bottom: 30px;
+        }
 
         .carousel-left{
             position: absolute;
