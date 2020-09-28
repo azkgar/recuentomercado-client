@@ -3,6 +3,7 @@ import {Helmet} from "react-helmet";
 import ReactGa from "react-ga";
 import MainBanner from "../components/Web/MainBanner";
 import NewsBanner from "../components/Web/NewsBanner";
+import VideosBanner from "../components/Web/VideosBanner";
 
 export default function Home() {
     return(
@@ -66,8 +67,9 @@ export default function Home() {
                     content = "El Recuento del Mercado"
                 />
             </Helmet>
-            <MainBanner />
+            <MainBanner/>
             <NewsBanner/>
+            <VideosBanner/>
         </>
     );
 }

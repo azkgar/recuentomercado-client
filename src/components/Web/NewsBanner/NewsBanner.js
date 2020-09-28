@@ -10,8 +10,6 @@ import "./NewsBanner.scss";
 
 export default function NewsBanner() {
     const [posts, setPosts] = useState();
-    //const [firstRow, setFirstRow] = useState();
-    //const [secondRow, setSecondRow] = useState();
     const page = 1;
 
     useEffect(()=>{
