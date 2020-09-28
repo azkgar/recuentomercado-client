@@ -70,30 +70,48 @@
             margin-bottom: 90px;
             background-color: $RM-dark-green;
 
-            //@media(max-width: $s-large){
-            //    width: 230px;
-            //    height: auto;
-            //}
+            @media(max-width: $s-large){
+                width: 490px;
+                height: 234px;
+            }
 
-            //@media (max-width: $s-laptop){
-            //    width: 370px;
-            //    height: auto;
-            //    margin-right: 42px;
-            //}
+            @media (max-width: $s-laptop){
+                width: 742px;
+                height: 355px;
+                margin-left: calc(((100vw - 200px) / 2) - 371px);
+            }
 
-            //@media(max-width: $s-tablet){
-            //    width: 100%;
-            //    height: auto;
-            //}
+            @media(max-width: $s-tablet){
+                width: 100%;
+                height: calc((100vw - 200px) * 0.48);
+                margin-left: auto;
+                margin-right: auto;
+            }
 
-            //@media(max-width: $s-phone){
-            //    margin-bottom: 20px;
-            //}
+            @media(max-width: $s-phone){
+                height: calc((100vw / 2) - 60px);
+            }
 
-            //@media(width: 1366px){
-            //    width:210px;
-            //    height: auto;
-            //}
+            @media(max-width: $s-phone-m){
+                height: 600px;
+            }
+
+            @media(width: 1366px){
+                width: 100%;
+                height: 450px;
+            }
+
+            @media(width: 568px){
+                height: 680px;
+            }
+
+            @media(max-width: $s-phone-s){
+                height: 560px;
+            }
+
+            @media(max-width: $s-phone-xs){
+                height: 500px;
+            }
         }
 
         &-right{
@@ -105,35 +123,90 @@
             margin-bottom: 90px;
             background-color: $RM-dark-green;
 
-            //@media(max-width: $s-large){
-            //    width: 230px;
-            //    height: auto;
-            //}
+            @media(min-width: $s-4k){
+                margin-right: 50px;
+            }
 
-            //@media (max-width: $s-laptop){
-            //    width: 370px;
-            //    height: auto;
-            //    margin-right: 42px;
-            //}
+            @media(max-width: $s-large){
+                width: 490px;
+                height: 234px;
+            }
 
-            //@media(max-width: $s-tablet){
-            //    width: 100%;
-            //    height: auto;
-            //}
+            @media (max-width: $s-laptop){
+                width: 742px;
+                height: 355px;
+                margin-left: calc(((100vw - 200px) / 2) - 371px);
+            }
 
-            //@media(max-width: $s-phone){
-            //    margin-bottom: 20px;
-            //}
+            @media(max-width: $s-tablet){
+                width: 100%;
+                height: calc((100vw - 200px) * 0.48);
+                margin-left: calc(((100vw - 200px) / 2) - (100vw / 2) + 100px);
+            }
 
-            //@media(width: 1366px){
-            //    width:210px;
-            //    height: auto;
-            //}
+            @media(max-width: $s-phone){
+                height: calc((100vw / 2) - 60px);
+            }
+
+            @media(max-width: $s-phone-m){
+                height: 600px;
+            }
+
+            @media(width: 1366px){
+                width: 100%;
+                height: 450px;
+            }
+
+            @media(width: 568px){
+                height: 680px;
+            }
+
+            @media(max-width: $s-phone-s){
+                height: 560px;
+            }
+
+            @media(max-width: $s-phone-xs){
+                height: 500px;
+            }
         }
 
         &-cover{
             width: 355px;
             height: 355px;
+
+            @media(max-width: $s-large){
+                width: 234px;
+                height: 234px;
+            }
+
+            @media(max-width: $s-laptop){
+                width: 355px;
+                height: 355px;
+            }
+
+            @media(max-width: $s-tablet){
+                width: 48%;
+                height: calc((100vw - 200px) * 0.48);
+            }
+
+            @media(max-width: $s-phone){
+                height: 100%;
+            }
+
+            @media(max-width: $s-phone-m){
+                width: 100%;
+                height: calc(100vw - 60px);
+            }
+
+            @media(width: 1366px){
+                width: 48%;
+                height: 100%;
+            }
+
+            @media(width: 568px){
+                width: 100%;
+                height: calc(100vw - 60px);
+            }
         }
 
         &-description{
@@ -144,7 +217,65 @@
                 width: 280px;
                 color: $RM-white;
                 font-family: $body-font;
-                font-size: 16px;;
+                font-size: 16px;
+
+                @media(max-width: $s-large){
+                    left: 258px;
+                    top: 26px;
+                    width: 216px;
+                    font-size: 12px;
+                }
+
+                @media(max-width: $s-laptop){
+                    top: 56px;
+                    left: 409px;
+                    width: 280px;
+                    font-size: 16px;
+                }
+
+                @media(max-width: $s-tablet){
+                    left: 300px;
+                    top: 40px;
+                    width: 230px;
+                    font-size: 12px;
+                }
+
+                @media(max-width: $s-phone){
+                    left: 325px;
+                }
+
+                @media(max-width: $s-phone-m){
+                    position: relative;
+                    width: calc((100vw - 60px) * 0.8);
+                    left: calc(((100vw - 60px) * 0.2) / 2);
+                    top: 20px;
+                }
+
+                @media(width: 1366px){
+                    top: 80px;
+                    left: 550px;
+                    width: 280px;
+                    font-size: 16px;
+                }
+
+                @media(width: 568px){
+                    position: relative;
+                    width: calc((100vw - 60px) * 0.8);
+                    left: calc(((100vw - 60px) * 0.2) / 2);
+                    top: 20px;
+                }
+
+                @media(max-width: 823px) and (min-width: 731px){
+                    left: 350px;
+                }
+
+                @media(width: 812px){
+                    left: 330px;
+                }
+
+                @media(width: 768px){
+                    left: 300px;
+                }
             }
 
             &-button{
@@ -166,6 +297,54 @@
                 outline: none;
 
                 transition: width 0.3s ease-out;
+
+                @media(max-width: $s-large){
+                    left: 258px;
+                    bottom: 20px;
+                }
+
+                @media(max-width: $s-laptop){
+                    left: 409px;
+                    bottom: 45px;
+                }
+
+                @media(max-width: $s-tablet){
+                    left: 300px;
+                    bottom: 30px;
+                }
+
+                @media(max-width: $s-phone){
+                    left: 325px;
+                }
+
+                @media(max-width: $s-phone-m) {
+                    position: relative;
+                    left: calc(((100vw - 60px) * 0.2) / 2);
+                    bottom: -25px;
+                }
+
+                @media(width: 1366px){
+                    left: 550px;
+                    bottom: 80px;
+                }
+
+                @media(width: 568px){
+                    position: relative;
+                    left: calc(((100vw - 60px) * 0.2) / 2);
+                    bottom: -25px;
+                }
+
+                @media(max-width: 823px) and (min-width: 731px){
+                    left: 350px;
+                }
+
+                @media(width: 812px){
+                    left: 330px;
+                }
+
+                @media(width: 768px){
+                    left: 300px;
+                }
                 
                 .listen-arrow{
                     width: 40px;
@@ -248,6 +427,7 @@
         @media(max-width: $s-phone){
             position: absolute;
             bottom: 80px;
+            left: 30px;
         }
 
             .read-arrow{
