@@ -5,6 +5,7 @@ import MainBanner from "../components/Web/MainBanner";
 import NewsBanner from "../components/Web/NewsBanner";
 import VideosBanner from "../components/Web/VideosBanner";
 import PodcastBanner from "../components/Web/PodcastBanner";
+import StocksBanner from "../components/Web/StocksBanner";
 
 export default function Home() {
     return(
@@ -72,6 +73,7 @@ export default function Home() {
             <NewsBanner/>
             <VideosBanner/>
             <PodcastBanner/>
+            <StocksBanner/>
         </>
     );
 }
