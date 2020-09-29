@@ -70,10 +70,10 @@ export default function Home() {
                 />
             </Helmet>
             <MainBanner/>
+            <StocksBanner/>
             <NewsBanner/>
             <VideosBanner/>
             <PodcastBanner/>
-            <StocksBanner/>
         </>
     );
 }
