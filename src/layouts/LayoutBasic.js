@@ -1,6 +1,7 @@
 import React from "react";
 import {Route, Switch} from "react-router-dom";
 import NavBar from "../components/Web/NavBar";
+import Footer from "../components/Web/Footer";
 
 import "./LayoutBasic.scss";
 
@@ -11,6 +12,7 @@ export default function LayoutBasic(props){
         <>
             <NavBar/>
             <LoadRoutes routes = {routes} />
+            <Footer/>
         </>
     );
 }

@@ -1,0 +1,23 @@
+@import "../../../../scss/index.scss";
+
+.footer-menu{
+    width: 100%;
+    display: inline-block;
+    font-family: $titles-font;
+    font-size: 16px;
+
+    &__item{
+        margin-top: 102px;
+        margin-right: 32px;
+        display: inline-block;
+
+        @media(max-width: $s-phone){
+            margin-top: 20px;
+            margin-right: 15px;
+        }
+
+        a{
+            color: $RM-white;
+        }
+    }
+}
