@@ -19,5 +19,11 @@
         a{
             color: $RM-green;
         }
+
+        &:hover{
+            a{
+                color: $RM-white;
+            }
+        }
     }
 }

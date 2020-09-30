@@ -15,7 +15,7 @@
         display: block;
         position: absolute;
         width: 555px;
-        height: 700px;
+        height: 940px;
         transition: width 0.5s, height 0.5s ease-in;
         z-index: 10;
 
@@ -191,6 +191,19 @@
             }
         }
         
+
+            .social{
+                font-size: 20px;
+                margin-bottom: 16px;
+                a{
+                    color: $RM-green;
+    
+                    &:hover{
+                        color: $RM-white;
+                    }
+                }
+            }
+        
     }
     &__logo{
         position: absolute;
@@ -264,6 +277,9 @@
             -webkit-transform: rotate(360deg) translateZ(0);
         }
     }
-    
+}
+
+#first-social{
+    margin-top: 32px;
 }
 

@@ -43,6 +43,7 @@ export default function NavBar(){
 
     const showClass = isVisible ? "show-menu" : "hide-menu";
     const showText = isVisible ? "show-text" : "hide-text";
+    const showTextSocial = isVisible ? "show-text social" : "hide-text social"
 
     const classes = `navbar__hamburguer-menu ${showClass}`
 
@@ -119,6 +120,44 @@ export default function NavBar(){
                             </li>
                         );
                     })}
+                    <li className = {showTextSocial}
+                        id = "first-social"
+                    >
+                        <a
+                            href = "https://www.youtube.com"
+                            rel = "noopener noreferrer"
+                            target = "_blank"
+                        >
+                            YouTube
+                        </a>
+                    </li>
+                    <li className = {showTextSocial}>
+                        <a
+                            href = "https://www.facebook.com/RecuentoMercado"
+                            rel = "noopener noreferrer"
+                            target = "_blank"
+                        >
+                            Facebook
+                        </a>
+                    </li>
+                    <li className = {showTextSocial}>
+                        <a
+                            href = "https://www.spotify.com"
+                            rel = "noopener noreferrer"
+                            target = "_blank"
+                        >
+                            Spotify
+                        </a>
+                    </li>
+                    <li className = {showTextSocial}>
+                        <a
+                            href = "https://www.instagram.com/RecuentoMercado"
+                            rel = "noopener noreferrer"
+                            target = "_blank"
+                        >
+                            Instagram
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
