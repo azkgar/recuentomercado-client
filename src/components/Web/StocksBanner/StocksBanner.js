@@ -84,7 +84,9 @@ function Gold() {
     }
 
     return(
-        <div className = "stocks-banner__ticker">
+        <div className = "stocks-banner__ticker"
+            id = "gold"
+        >
             <h4 className = "stocks-banner__ticker-title">
                 Oro
             </h4>
@@ -167,7 +169,9 @@ function SP500() {
     }
 
     return(
-        <div className = "stocks-banner__ticker">
+        <div className = "stocks-banner__ticker"
+            id = "sp500"
+        >
             <h4 className = "stocks-banner__ticker-title">
                 S&P 500
             </h4>
@@ -250,7 +254,9 @@ function DOW() {
     }
 
     return(
-        <div className = "stocks-banner__ticker">
+        <div className = "stocks-banner__ticker"
+            id = "dow"
+        >
             <h4 className = "stocks-banner__ticker-title">
                 Dow Jones
             </h4>
@@ -333,7 +339,9 @@ function NASDAQ() {
     }
 
     return(
-        <div className = "stocks-banner__ticker">
+        <div className = "stocks-banner__ticker"
+            id = "nasdaq"
+        >
             <h4 className = "stocks-banner__ticker-title">
                 Nasdaq
             </h4>
@@ -416,7 +424,9 @@ function RUSSELL() {
     }
 
     return(
-        <div className = "stocks-banner__ticker">
+        <div className = "stocks-banner__ticker"
+            id = "russell"
+        >
             <h4 className = "stocks-banner__ticker-title">
                 Russell 2000
             </h4>
@@ -498,7 +508,9 @@ function Oil() {
     }
 
     return(
-        <div className = "stocks-banner__ticker">
+        <div className = "stocks-banner__ticker"
+            id = "oil"
+        >
             <h4 className = "stocks-banner__ticker-title">
                 Petróleo
             </h4>

@@ -5,6 +5,15 @@
     padding-left: 200px;
     position: absolute;
     top: 880px;
+    overflow: hidden;
+
+    @media (max-width: $s-laptop){
+        padding-left: 100px;
+    }
+
+    @media (max-width: $s-phone){
+        padding-left: 30px;
+    }
 
     &__ticker{
         width: 226px;
@@ -14,6 +23,34 @@
         position: relative;
         background-color: $RM-dark-green;
         padding-left: 32px;
+
+        @media(max-width: $s-laptop){
+            margin-right: 65px;
+        }
+        
+        @media (max-width: $s-tablet){
+            margin-right: 105px;
+        }
+
+        @media (max-width: $s-phone){
+            margin-right: 60px;
+        }
+
+        @media (max-width: $s-phone-m){
+            margin-left: 65px;
+        }
+
+        @media (max-width: $s-phone-s){
+            margin-left: 30px;
+        }
+
+        @media (max-width: $s-phone-xs){
+            margin-left: 15px;
+        }
+
+        @media(width: 568px){
+            margin-right: 40px;
+        }
         
         &-title{
             font-family: $titles-font;
@@ -146,5 +183,35 @@
         }
 
 
+    }
+}
+
+#gold{
+    @media(max-width: $s-large){
+        display: none;
+    }
+}
+
+#oil{
+    @media(max-width: $s-large){
+        display: none;
+    }
+}
+
+#russell{
+    @media (max-width: $s-laptop){
+        display: none;
+    }
+}
+
+#nasdaq{
+    @media (max-width: $s-tablet){
+        display: none;
+    }
+}
+
+#dow{
+    @media (max-width: $s-phone-m){
+        display: none;
     }
 }
