@@ -101,8 +101,8 @@ export function getPostApi(urlPost) {
     });
 }
 
-export function getAllPostsApi(search) {
-    const url = `${basePath}/${apiVersion}/get-all-posts/${search}`;
+export function getAllPostsApi() {
+    const url = `${basePath}/${apiVersion}/get-all-posts/`;
 
     return fetch(url)
     .then(response => {

@@ -101,8 +101,8 @@ export function getVideoApi(urlPost) {
     });
 }
 
-export function getAllVideosApi(search) {
-    const url = `${basePath}/${apiVersion}/get-all-videos/${search}`;
+export function getAllVideosApi() {
+    const url = `${basePath}/${apiVersion}/get-all-videos/`;
 
     return fetch(url)
     .then(response => {

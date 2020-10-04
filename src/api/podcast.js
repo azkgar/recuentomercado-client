@@ -101,8 +101,8 @@ export function getPodcastApi(urlPost) {
     });
 }
 
-export function getAllPodcastsApi(search) {
-    const url = `${basePath}/${apiVersion}/get-all-podcasts/${search}`;
+export function getAllPodcastsApi() {
+    const url = `${basePath}/${apiVersion}/get-all-podcasts/`;
 
     return fetch(url)
     .then(response => {

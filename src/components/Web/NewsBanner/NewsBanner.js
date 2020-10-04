@@ -42,7 +42,7 @@ export default function NewsBanner() {
 
                     return(
                         <Col xl = {8} lg = {12} md = {12} sm = {24} xs = {24} key = {post._id}>
-                            <Link to = {`/noticias/${post.url}`}>
+                            <Link to = {`/articulos/${post.url}`}>
                                 <div className = "news-card">
                                     <img
                                         className = "news-cover"
@@ -67,7 +67,7 @@ export default function NewsBanner() {
                     );
                 })}
             </Row>
-            <Link to = "/noticias">
+            <Link to = "/articulos">
                 <button className = "redirect-button">
                     Más artículos
                     <div className = "redirect-arrow"></div>

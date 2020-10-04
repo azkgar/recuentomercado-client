@@ -14,6 +14,7 @@ import AdminPodcasts from "../pages/Admin/Podcasts";
 
 //User Pages
 import Home from "../pages/Home";
+import News from "../pages/News";
 
 //Error Page
 
@@ -73,6 +74,11 @@ const routes = [
             {
                 path: "/",
                 component: Home,
+                exact: true
+            },
+            {
+                path: "/articulos",
+                component: News,
                 exact: true
             }
         ]
