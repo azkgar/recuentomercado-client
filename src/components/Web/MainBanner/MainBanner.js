@@ -91,7 +91,7 @@ export default function MainBanner() {
             {posts.map((post, index) => {
                 return(
                     <Link
-                        to = {`/noticias/${post.url}`}
+                        to = {`/articulos/${post.url}`}
                         key = {post._id}
                     >
                         <button

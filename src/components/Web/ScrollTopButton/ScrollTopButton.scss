@@ -1,0 +1,74 @@
+@import "../../../scss/index.scss";
+
+@keyframes fadeIn{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+
+.scroll-top{
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 40px;
+    //left: calc((100vw / 2) - 30px);
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    cursor: pointer;
+    animation: fadeIn 0.3s;
+    transition: opacity 0.4s;
+    opacity: 0.5;
+    background-color: $RM-dark-green;
+
+    &:hover{
+        opacity: 1;
+
+        .scroll-top__arrow{
+            height: 40px;
+            top: 13px;
+            transition: top 0.2s, height 0.1s ease-in;
+        }
+    }
+
+    &__arrow{
+        position: absolute;
+        width: 3px;
+        height: 25px;
+        background-color: $RM-white;
+        left: 28px;
+        top: 20px;
+        border-radius: 0.5px;
+        transition: top 0.3, height 0.2s ease-out;
+
+        &:after{
+            content: "";
+            display: inline-block;
+            width: 3px;
+            height: 15px;
+            background-color: $RM-white;
+            transform: rotate(-55deg);
+            position: absolute;
+            top: -4px;
+            left: 5px;
+            transition: top 0.3 ease-out;
+        }
+
+        &:before{
+            content: "";
+            display: inline-block;
+            width: 3px;
+            height: 15px;
+            background-color: $RM-white;
+            transform: rotate(55deg);
+            position: absolute;
+            top: -4px;
+            left: -5px;
+            transition: top 0.3 ease-out;
+        }
+    }
+}

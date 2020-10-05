@@ -45,7 +45,7 @@ const routes = [
                 exact: true
             },
             {
-                path: "/admin/noticias",
+                path: "/admin/articulos",
                 component: AdminNews,
                 exact: true
             },
@@ -78,6 +78,11 @@ const routes = [
             },
             {
                 path: "/articulos",
+                component: News,
+                exact: true
+            },
+            {
+                path: "/articulos/:url",
                 component: News,
                 exact: true
             }

@@ -27,6 +27,7 @@
     "react-helmet": "^6.1.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
+    "react-share": "^4.3.0",
     "server": "^1.0.30",
     "stock-info": "^1.2.0"
   },
