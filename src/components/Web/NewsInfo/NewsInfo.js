@@ -5,7 +5,7 @@ import "moment/locale/es-mx";
 import {Redirect, Link} from "react-router-dom";
 import {Helmet} from "react-helmet";
 import ReactGa from "react-ga";
-import {EmailShareButton, EmailIcon, FacebookShareButton, FacebookIcon, PinterestShareButton, PinterestIcon, TwitterShareButton, TwitterIcon, WhatsappShareButton, WhatsappIcon} from "react-share";
+import {EmailShareButton, EmailIcon, FacebookShareButton, FacebookIcon, PinterestShareButton, PinterestIcon, TwitterShareButton, TwitterIcon, WhatsappShareButton, WhatsappIcon, FacebookMessengerShareButton, FacebookMessengerIcon, LinkedinShareButton, LinkedinIcon, TelegramShareButton, TelegramIcon} from "react-share";
 import {getPostApi} from "../../../api/post";
 import {getCategoryTagApi} from "../../../api/category";
 import Icono from "../../../assets/img/svg/RM-logo-icono.svg";
@@ -113,6 +113,12 @@ export default function NewsInfo(props) {
             </p>
             </div>
             <div className = "post-info__body">
+                <Link to = "/articulos">
+                    <button className = "post-info__body-return">
+                        <div className = "post-info__body-return-arrow"></div>
+                        Regresar
+                    </button>
+                </Link>
                 <div className = "post-info__body-tags">
                     {
                         categories.map(category => {
@@ -129,9 +135,11 @@ export default function NewsInfo(props) {
                         })
                     }
                 </div>
-                <p className = "post-info__body-date">
-                    {moment(postInfo.date).local("es-mx").format("LLLL")}
-                </p>
+                <div className = "post-info__body-date">
+                    <p>
+                        {moment(postInfo.date).local("es-mx").format("LLLL")}
+                    </p>
+                </div>
                 <div 
                     className = "post-info__body-content"
                     dangerouslySetInnerHTML = {{__html: postInfo.content}}    
@@ -139,6 +147,65 @@ export default function NewsInfo(props) {
                 <p className = "post-info__body-writer">
                     {`Reportado por:   ${postInfo.username}`}
                 </p>
+            </div>
+            <div className = "post-info__social">
+                <h3 className = "post-info__social-title">
+                    Comparte el artículo
+                </h3>
+                <EmailShareButton
+                    url = {`${socialUrl}${url}`}
+                    subject = {postInfo.title}
+                    body = {`Lee ${postInfo.title} en: `}
+                >
+                    <EmailIcon/>
+                </EmailShareButton>
+                <FacebookShareButton
+                    url = {`${socialUrl}${url}`}
+                    quote = {`Nuevo artículo: ${postInfo.title}`}
+                    hashtag = "#ElRecuentoDelMercado"
+
+                >
+                    <FacebookIcon/>
+                </FacebookShareButton>
+                <PinterestShareButton
+                    url = {`${socialUrl}${url}`}
+                    media = {postInfo.pinterest}
+                    description = {postInfo.description}
+                >
+                    <PinterestIcon/>
+                </PinterestShareButton>
+                <TwitterShareButton
+                    url = {`${socialUrl}${url}`}
+                    title = {`Nuevo artículo: ${postInfo.title}`}
+                    hashtags = {["ElRecuentoDelMercado"]}
+                >
+                    <TwitterIcon/>
+                </TwitterShareButton>
+                <WhatsappShareButton
+                    url = {`${socialUrl}${url}`}
+                    title = {`Nuevo artículo: ${postInfo.title}`}
+                >
+                    <WhatsappIcon/>
+                </WhatsappShareButton>
+                <FacebookMessengerShareButton
+                    url = {`${socialUrl}${url}`}
+                >
+                    <FacebookMessengerIcon/>
+                </FacebookMessengerShareButton>
+                <LinkedinShareButton
+                    url = {`${socialUrl}${url}`}
+                    title = {`Nuevo artículo: ${postInfo.title}`}
+                    summary = {postInfo.description}
+                    source = {socialUrl}
+                >
+                    <LinkedinIcon/>
+                </LinkedinShareButton>
+                <TelegramShareButton
+                    url = {`${socialUrl}${url}`}
+                    title = {`Nuevo artículo: ${postInfo.title}`}
+                >
+                    <TelegramIcon/>
+                </TelegramShareButton>
             </div>
         </div>
         </>
