@@ -73,7 +73,7 @@ export default function NewsInfo(props) {
             />
         );
     }
-
+    
     return(
         <>
         <Helmet>
@@ -104,6 +104,7 @@ export default function NewsInfo(props) {
                 src = {postInfo.cover}
                 alt = {`Portada de ${postInfo.title}`}
             />
+            <div className = "filter"></div>
             <h1 className = "post-info__header-title">
                 {postInfo.title}
             </h1>
@@ -112,9 +113,6 @@ export default function NewsInfo(props) {
             </p>
             </div>
             <div className = "post-info__body">
-                <p className = "post-info__body-date">
-                    {moment(postInfo.date).local("es-mx").format("LLLL")}
-                </p>
                 <div className = "post-info__body-tags">
                     {
                         categories.map(category => {
@@ -131,10 +129,16 @@ export default function NewsInfo(props) {
                         })
                     }
                 </div>
+                <p className = "post-info__body-date">
+                    {moment(postInfo.date).local("es-mx").format("LLLL")}
+                </p>
                 <div 
                     className = "post-info__body-content"
                     dangerouslySetInnerHTML = {{__html: postInfo.content}}    
                 ></div>
+                <p className = "post-info__body-writer">
+                    {`Reportado por:   ${postInfo.username}`}
+                </p>
             </div>
         </div>
         </>

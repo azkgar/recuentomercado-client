@@ -40,7 +40,7 @@ function MenuSider(props) {
                 <Menu.Item key = "/admin/articulos">
                     <Link to={"/admin/articulos"}>
                         <FileOutlined/>
-                        <span className="nav-text">Noticias</span>
+                        <span className="nav-text">Artículos</span>
                     </Link>
                 </Menu.Item>
                 <Menu.Item key = "/admin/categorias">
