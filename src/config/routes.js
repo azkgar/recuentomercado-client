@@ -15,6 +15,7 @@ import AdminPodcasts from "../pages/Admin/Podcasts";
 //User Pages
 import Home from "../pages/Home";
 import News from "../pages/News";
+import Categories from "../pages/Categories";
 
 //Error Page
 
@@ -84,6 +85,11 @@ const routes = [
             {
                 path: "/articulos/:url",
                 component: News,
+                exact: true
+            },
+            {
+                path: "/categorias",
+                component: Categories,
                 exact: true
             }
         ]

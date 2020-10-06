@@ -6,6 +6,7 @@ import {Redirect, Link} from "react-router-dom";
 import {Helmet} from "react-helmet";
 import ReactGa from "react-ga";
 import {EmailShareButton, EmailIcon, FacebookShareButton, FacebookIcon, PinterestShareButton, PinterestIcon, TwitterShareButton, TwitterIcon, WhatsappShareButton, WhatsappIcon, FacebookMessengerShareButton, FacebookMessengerIcon, LinkedinShareButton, LinkedinIcon, TelegramShareButton, TelegramIcon} from "react-share";
+import HyvorTalk from "hyvor-talk-react";
 import {getPostApi} from "../../../api/post";
 import {getCategoryTagApi} from "../../../api/category";
 import Icono from "../../../assets/img/svg/RM-logo-icono.svg";
@@ -206,6 +207,12 @@ export default function NewsInfo(props) {
                 >
                     <TelegramIcon/>
                 </TelegramShareButton>
+            </div>
+            <div className = "post-info__comments">
+                   <HyvorTalk.Embed
+                       websiteId = {2098}
+                       id = {postInfo._id}
+                   /> 
             </div>
         </div>
         </>

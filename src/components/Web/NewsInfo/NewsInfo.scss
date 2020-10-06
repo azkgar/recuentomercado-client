@@ -235,6 +235,12 @@
                 background-color: $RM-green;
                 color: $RM-white;
                 cursor: pointer;
+                box-shadow: 0 14px 26px rgba(0,0,0,0.04);
+
+                &:hover{
+                    transform: translateY(-5px) scale(1.005) translateZ(0);
+                    box-shadow: 0 24px 36px rgba(0,0,0,0.11);
+                }
 
                 @media(max-width: $s-phone-m){
                     margin-bottom: 10px;
@@ -251,6 +257,12 @@
                 margin-top: 120px;
             }
 
+            h2,h3,h4,h5,h6{
+                font-family: $subtitles-font;
+                text-transform: capitalize;
+                color: $RM-green;
+            }
+
             a{
                 color: $RM-green;
                 text-decoration: underline;
@@ -259,6 +271,38 @@
             p{
                 line-height: 45px;
                 margin-bottom: 60px
+            }
+
+            blockquote{
+                font-style: italic;
+                border-left: 5px solid $RM-green-transparent;
+                margin: 1.5em 10px;
+                padding: 0.5em 10px;
+                position: relative;
+
+                &:after{
+                    content: "\201D";
+                    position: absolute;
+                    top: 0.28em;
+                    right: 0;
+                    font-size: 6em;
+                    font-style: italic;
+                    color: $RM-green-transparent;
+                    z-index: -1;
+                }
+
+                footer{
+                    font-family: $titles-font;
+                    font-size: 0.9em;
+                    color: $RM-green-transparent;
+                    float: right;
+                    font-style: normal;
+
+                    &:before{
+                        content: "\2015";
+                    }
+                }
+
             }
 
         }
@@ -304,6 +348,22 @@
                 transform: translateY(-5px) scale(1.005) translateZ(0);
                 box-shadow: 0 24px 36px rgba(0,0,0,0.11);
             }
+        }
+    }
+
+    &__comments{
+        padding-left: 200px;
+        padding-right: 200px;
+        position: relative;
+
+        @media (max-width: $s-laptop){
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+
+        @media (max-width: $s-phone){
+            padding-left: 30px;
+            padding-right: 30px;
         }
     }
 }

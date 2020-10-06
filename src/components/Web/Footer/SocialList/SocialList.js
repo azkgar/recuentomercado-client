@@ -7,7 +7,7 @@ export default function SocialList() {
         <div className = "footer-social">
             <p className = "footer-social__link">
                 <a
-                    href = "https://www.youtube.com"
+                    href = "https://www.youtube.com/channel/UCVXjaPiyO1By_PwCI0l4Wjw"
                     target = "_blank"
                     rel = "noopener noreferrer"
                 >

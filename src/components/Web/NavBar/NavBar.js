@@ -124,7 +124,7 @@ export default function NavBar(){
                         id = "first-social"
                     >
                         <a
-                            href = "https://www.youtube.com"
+                            href = "https://www.youtube.com/channel/UCVXjaPiyO1By_PwCI0l4Wjw"
                             rel = "noopener noreferrer"
                             target = "_blank"
                         >

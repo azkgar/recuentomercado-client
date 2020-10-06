@@ -1,0 +1,122 @@
+@import "../../../scss/index.scss";
+
+@-webkit-keyframes spin{
+    100%{-webkit-transform: rotate(360deg);}
+}
+@-moz-keyframes spin{
+    100%{-webkit-transform: rotate(360deg);}
+}
+@keyframes spin{
+    100%{-webkit-transform: rotate(360deg);}
+}
+
+.logo-spin{
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    top: 50%;
+    left: calc(50% - 40px);
+    -webkit-animation: spin 1s linear infinite;
+    -moz-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+}
+
+.categories-cover{
+    overflow: hidden;
+
+    @media(max-width: $s-laptop){
+        padding-top: 106px;
+        background-color: $RM-white;
+    }
+    @media(max-width: $s-phone){
+        padding-top: 85px;
+    }
+    img{
+        width: 100%;
+        height: auto;
+    }
+}
+
+.categories-list{
+        padding-left: 200px;
+        padding-right: 200px;
+        padding-bottom: 100px;
+        overflow: hidden;
+
+        @media (max-width: $s-laptop){
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+
+        @media (max-width: $s-phone){
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+    &__title{
+            margin-top: 140px;
+            font-family: $titles-font;
+            font-size: 40px;
+            margin-bottom: 70px;
+
+            @media(max-width: $s-phone){
+                font-size: 35px;
+                margin-top: 70px;
+            }
+
+            @media(max-width: $s-phone-s){
+                font-size: 30px;
+            }
+
+            @media(max-width: $s-phone-xs){
+                font-size: 25px;
+            }
+    }
+
+    &__item{
+        width: 742px;
+        height: 355px;
+        display: inline-block;
+        margin-right: 18px;
+        margin-bottom: 18px;
+        box-shadow: 0 14px 26px rgba(0,0,0,0.04);
+        transition: all 0.3s ease-out;
+
+        @media(max-width: $s-large){
+            width: 490px;
+            height: 234px;
+        }
+
+        @media (max-width: $s-laptop){
+            width: 742px;
+            height: 355px;
+            margin-left: calc(((100vw - 200px) / 2) - 371px);
+        }
+
+        @media(max-width: $s-tablet){
+            width: 100%;
+            height: calc((100vw - 200px) * 0.48);
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media(max-width: $s-phone){
+            height: 200px;
+        }
+
+        @media(width: 1366px){
+            width: 100%;
+            height: 450px;
+        }
+
+        &:hover{
+            transform: translateY(-5px) scale(1.005) translateZ(0);
+            box-shadow: 0 24px 36px rgba(0,0,0,0.11);
+        }
+
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
