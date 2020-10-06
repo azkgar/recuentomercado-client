@@ -91,6 +91,11 @@ const routes = [
                 path: "/categorias",
                 component: Categories,
                 exact: true
+            },
+            {
+                path: "/categorias/:tag",
+                component: Categories,
+                exact: true
             }
         ]
     }
