@@ -11,7 +11,7 @@ function App() {
   return (
     <AuthProvider>
       <Router>
-      <ScrollToTop/>
+      <ScrollToTop />
         <Switch>
           {routes.map((route,index) => (
             <RouteWithSubRoutes key = {index} {...route} />

@@ -8,6 +8,7 @@ import ReactGa from "react-ga";
 import {getCategoryApi} from "../../../api/category";
 import {getRelatedPostsApi} from "../../../api/post";
 import Icono from "../../../assets/img/svg/RM-logo-icono.svg";
+import Missing from "../../../assets/img/png/Missing.png";
 import ScrollTopButton from "../ScrollTopButton";
 
 import "./CategoryInfo.scss";
@@ -30,7 +31,7 @@ export default function CategoryInfo(props) {
         if(label) {
             getRelatedPostsApi(label)
             .then(response => {
-                setPosts(response.posts.reverse());
+                setPosts(response.posts);
             });
         }
     },[label]);
@@ -53,12 +54,12 @@ export default function CategoryInfo(props) {
                 <div className= "category__header">
                     <img
                         className = "category__header-cover"
-                        src = {avatar}
+                        src = {avatar ? avatar : Missing}
                         alt = {`Portada de artículos relacionados con ${label}`}
                     />
                     <div className = "filter"></div>
                 </div>
-                <div clasName = "category__body">
+                <div className = "category__body">
                     <Link to = "/categorias">
                         <button className = "category__body-return">
                             <div className = "category__body-return-arrow"></div>
