@@ -317,4 +317,20 @@
     .ant-list-header{
         font-family: $titles-font;
     }
+
+    .ant-pagination-jump-prev .ant-pagination-item-container .ant-pagination-item-link-icon{
+        color: $RM-green;
+    }
+    
+    .ant-pagination-jump-next .ant-pagination-item-container .ant-pagination-item-link-icon{
+        color: $RM-green;
+    }
+
+    .ant-pagination-jump-next .ant-pagination-item-container .ant-pagination-item-ellipsis{
+        color: $RM-dark-green;
+    }
+    
+    .ant-pagination-jump-prev .ant-pagination-item-container .ant-pagination-item-ellipsis{
+        color: $RM-dark-green;
+    }
 }

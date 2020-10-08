@@ -1,0 +1,356 @@
+@import "../../../scss/index.scss";
+
+@-webkit-keyframes spin{
+    100%{-webkit-transform: rotate(360deg);}
+}
+@-moz-keyframes spin{
+    100%{-webkit-transform: rotate(360deg);}
+}
+@keyframes spin{
+    100%{-webkit-transform: rotate(360deg);}
+}
+
+.logo-spin{
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    top: 50%;
+    left: calc(50% - 40px);
+    -webkit-animation: spin 1s linear infinite;
+    -moz-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+}
+
+.video-list{
+    background-color: $RM-dark-green;
+    overflow: hidden;
+    border-bottom: solid 2px $RM-green;
+
+    &__banner{
+        overflow: hidden;
+
+        @media(max-width: $s-laptop){
+            padding-top: 106px;
+            background-color: $RM-white;
+        }
+        @media(max-width: $s-phone){
+            padding-top: 85px;
+        }
+        &-image{
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__content{
+        padding-left: 200px;
+        padding-right: 200px;
+        padding-bottom: 100px;
+        overflow: hidden;
+
+        @media (max-width: $s-laptop){
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+
+        @media (max-width: $s-phone){
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        &-suscribe{
+            &-cta{
+                color: $RM-red;
+            }
+            &-button{
+            }
+        }
+
+        &-title{
+            margin-top: 140px;
+            font-family: $titles-font;
+            font-size: 40px;
+            margin-bottom: 50px;
+            color: $RM-white;
+
+            @media(max-width: $s-phone){
+                font-size: 35px;
+                margin-top: 90px;
+            }
+
+            @media(max-width: $s-phone-s){
+                font-size: 30px;
+            }
+
+            @media(max-width: $s-phone-xs){
+                font-size: 25px;
+            }
+        }
+
+        &-recent{
+            width: 100%;
+            height: auto;
+            margin-bottom: 50px;
+            box-shadow: 0 14px 26px rgba(255,255,255,0.04);
+            transition: all 0.3s ease-out;
+
+            &:hover{
+                transform: translateY(-5px) scale(1.005) translateZ(0);
+                box-shadow: 0 24px 36px rgba(255,255,255,0.11);
+            }
+
+            &-image{
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        &-videos{
+            &-item{
+                width: 730px;
+                margin-left: 20px;
+                margin-bottom: 50px;
+                display: inline-block;
+                box-shadow: 0 14px 26px rgba(255,255,255,0.04);
+                transition: all 0.3s ease-out;
+
+                @media (min-width: $s-4k){
+                    margin-left: 250px;
+                }
+
+                @media (max-width: $s-large){
+                    width: 100%;
+                    margin-left: 0;
+                }
+
+                &:hover{
+                    transform: translateY(-5px) scale(1.005) translateZ(0);
+                    box-shadow: 0 24px 36px rgba(255,255,255,0.11);
+                }
+
+                .cover{
+                    width: 730px;
+                    height: auto;
+
+                    @media (max-width: $s-large){
+                        width: 100%;
+                    }
+                }
+                .description{
+                    &-container{
+                        background-color: $RM-white;
+                        padding: 20px 40px 0 40px;
+                        height: 200px;
+                        position: relative;
+
+                        @media (max-width: $s-phone-m){
+                            height: 300px;
+                        }
+                    }
+                    &-title{
+                        font-family: $titles-font;
+                        font-size: 24px;
+                        color: $RM-dark-green;
+
+                        @media(max-width: $s-large){
+                            font-size: 20px;
+                        }
+            
+                        @media(max-width: $s-tablet){
+                            font-size: 18px;
+                        }
+            
+                        @media(max-width: $s-phone-xs){
+                            font-size: 15px;
+                        }
+                    }
+                    &-info{
+                        font-family: $body-font;
+                        font-size: 16px;
+                        color: $RM-dark-green;
+                        height: 80px;
+
+                        @media(max-width: $s-large){
+                            font-size: 14px;
+                        }
+            
+                        @media(max-width: $s-phone-xs){
+                            font-size: 12px;
+                        }
+                    }
+                    &-date{
+                        font-family: $titles-font;
+                        color: $RM-dark-grey;
+                        font-size: 12px;
+
+                        @media (max-width: $s-phone-m){
+                            position: absolute;
+                            bottom: 15px;
+                        }
+
+                        @media(max-width: $s-phone-s){
+                            width: 120px;
+                            bottom: 1px;
+                        }
+
+                        @media(max-width: $s-phone-xs){
+                            font-size: 10px;
+                            bottom: 58px;
+                            width: 150px;
+                        }
+                    }
+                }
+
+                .youtube{
+                    &-button{
+                        position: absolute;
+                        bottom: 0;
+                        right: 76px;
+                        height: 56px;
+                        width: 56px;
+                        background-color: $youtube;
+                        color: $RM-white;
+                        border-style: none;
+                        border: none;
+                        outline: none;
+                        cursor: pointer;
+
+                        .anticon{
+                            font-size: 30px;
+                            transition: font-size 0.3s ease-out;
+                        }
+
+                        &:hover{
+                            .anticon{
+                                font-size: 40px;
+                                transition: font-size 0.2s ease-in;
+                            }
+                        }
+                    }
+                }
+
+                .video-button{
+                    height: 56px;
+                    width: 56px;
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    background-color: $RM-dark-grey;
+                    border-style: none;
+                    border: none;
+                    outline: none;
+                    cursor: pointer;
+
+                    &:hover{
+                        .video-button-arrow{
+                            width: 34px;
+                            left: 11px;
+                            transition: left 0.2s, width 0.1s ease-in;
+                        }    
+                    }
+
+                    &-arrow{
+                        position: absolute;
+                        width: 19px;
+                        height: 2px;
+                        background-color: $RM-white;
+                        top: 27px;
+                        left: 18px;
+                        transition: left 0.3s, width 0.2s ease-out;
+
+                        &:after{
+                            content: "";
+                            display: inline-block;
+                            width: 10px;
+                            height: 2px;
+                            background-color: $RM-white;
+                            transform: rotate(45deg);
+                            position: absolute;
+                            top: -3px;
+                            right: -3px;
+                            transition: left 0.3s ease-out;
+                        }
+
+                        &:before{
+                            content: "";
+                            display: inline-block;
+                            width: 10px;
+                            height: 2px;
+                            background-color: $RM-white;
+                            transform: rotate(-45deg);
+                            position: absolute;
+                            top: 3px;
+                            right: -3px;
+                            transition: left 0.3s ease-out; 
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.ant-pagination-item{
+    font-family: $body-font;
+
+    &:hover{
+        border-color: $RM-green;
+
+        a{
+            color: $RM-green;
+        }
+    }
+}
+
+.ant-pagination-item-active{
+    font-family: $subtitles-font;
+    border-color: $RM-green;
+    background: $RM-green;
+
+    a{
+        color: $RM-white;
+    }
+
+    &:hover{
+        a{
+            color: $RM-dark-green;
+        }
+    }
+}
+
+.ant-pagination-next .ant-pagination-item-link{
+    &:hover{
+        border-color: $RM-green;
+
+        .anticon{
+            color: $RM-green;
+        }
+    }
+}
+
+.ant-pagination-prev .ant-pagination-item-link{
+    &:hover{
+        border-color: $RM-green;
+
+        .anticon{
+            color: $RM-green;
+        }
+    }
+}
+
+.ant-pagination-jump-prev .ant-pagination-item-container .ant-pagination-item-link-icon{
+    color: $RM-green;
+}
+
+.ant-pagination-jump-next .ant-pagination-item-container .ant-pagination-item-link-icon{
+    color: $RM-green;
+}
+
+.ant-pagination-jump-next .ant-pagination-item-container .ant-pagination-item-ellipsis{
+    color: $RM-white;
+}
+
+.ant-pagination-jump-prev .ant-pagination-item-container .ant-pagination-item-ellipsis{
+    color: $RM-white;
+}
+

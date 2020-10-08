@@ -16,6 +16,7 @@ import AdminPodcasts from "../pages/Admin/Podcasts";
 import Home from "../pages/Home";
 import News from "../pages/News";
 import Categories from "../pages/Categories";
+import Videos from "../pages/Videos";
 
 //Error Page
 
@@ -95,6 +96,11 @@ const routes = [
             {
                 path: "/categorias/:tag",
                 component: Categories,
+                exact: true
+            },
+            {
+                path: "/videos",
+                component: Videos,
                 exact: true
             }
         ]
