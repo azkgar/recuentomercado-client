@@ -17,6 +17,7 @@ import Home from "../pages/Home";
 import News from "../pages/News";
 import Categories from "../pages/Categories";
 import Videos from "../pages/Videos";
+import Podcast from "../pages/Podcast";
 
 //Error Page
 
@@ -106,6 +107,11 @@ const routes = [
             {
                 path: "/videos/:url",
                 component: Videos,
+                exact: true
+            },
+            {
+                path: "/podcast",
+                component: Podcast,
                 exact: true
             }
         ]

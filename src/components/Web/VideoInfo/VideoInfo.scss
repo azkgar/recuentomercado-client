@@ -127,6 +127,7 @@
             font-size: 40px;
             margin-bottom: 50px;
             color: $RM-white;
+            text-transform: capitalize;
 
             @media(max-width: $s-phone){
                 font-size: 35px;
@@ -201,6 +202,17 @@
     
             @media (max-width: $s-phone){
                 height: calc((100vw - 60px) / 2);
+            }
+        }
+
+        &-description{
+            font-size: 20px;
+            color: $RM-white;
+            font-family: $body-font;
+            margin-top: 50px;
+
+            @media(max-width: $s-laptop){
+                margin-top: 100px;
             }
         }
     }

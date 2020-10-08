@@ -40,7 +40,7 @@ export default function NewsList(props){
                 src = {Icono}
                 alt = "Cargando"
             />
-        ) 
+        ); 
     }
 
     return(

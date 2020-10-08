@@ -123,6 +123,9 @@ export default function VideoInfo(props) {
                         stopOnUnmount = "false"
                     />
                 </div>
+                <p className = "video-info__body-description">
+                    {videoInfo.description}
+                </p>
                 <div className = "video-info__social">
                     <h3 className = "video-info__social-title">
                         Comparte el video
