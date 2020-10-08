@@ -59,15 +59,30 @@
         }
 
         &-suscribe{
+            text-align: center;
             &-cta{
-                color: $RM-red;
-            }
-            &-button{
+                color: $RM-green;
+                font-family: $subtitles-font;
+                margin-top: 100px;
+                font-size: 40px;
+
+                @media(max-width: $s-phone){
+                    font-size: 35px;
+                    margin-top: 90px;
+                }
+    
+                @media(max-width: $s-phone-s){
+                    font-size: 30px;
+                }
+    
+                @media(max-width: $s-phone-xs){
+                    font-size: 25px;
+                }
             }
         }
 
         &-title{
-            margin-top: 140px;
+            margin-top: 70px;
             font-family: $titles-font;
             font-size: 40px;
             margin-bottom: 50px;

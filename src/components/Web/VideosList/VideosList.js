@@ -8,6 +8,7 @@ import {YoutubeOutlined} from "@ant-design/icons";
 import moment from "moment";
 import "moment/locale/es-mx";
 import {getVideosApi} from "../../../api/video";
+import useScript from "../../../hooks/useScript";
 import Pagination from "../../PaginationVideos";
 import Icono from "../../../assets/img/svg/RM-logo-icono.svg";
 import Banner from "../../../assets/img/jpg/recuento-mercado-videos.jpg";
@@ -21,7 +22,7 @@ export default function VideosList(props){
     const {page = 1} = queryString.parse(location.search);
 
     useEffect(() => {
-        getVideosApi(4, page)
+        getVideosApi(12, page)
         .then(response => {
             if(response.code !== 200) {
                 notification["warning"]({message: response.message});
@@ -72,10 +73,7 @@ export default function VideosList(props){
                     <h2 className = "video-list__content-suscribe-cta">
                         ¡Suscribete a El Recuento del Mercado!
                     </h2>
-                    <div className = "video-list__content-suscribe-button">
-                        <script src="https://apis.google.com/js/platform.js"></script>
-                        <div class="g-ytsubscribe" data-channelid="UCVXjaPiyO1By_PwCI0l4Wjw" data-layout="full" data-theme="dark" data-count="default"></div>
-                    </div>
+                    <YoutubeButton useScript = {useScript}/>
                 </div>
                 <h2 className = "video-list__content-title">
                     Nuestros videos
@@ -122,7 +120,7 @@ export default function VideosList(props){
                                       className = "youtube"  
                                     >
                                         <button className = "youtube-button">
-                                            <YoutubeOutlined/>
+                                            <YoutubeOutlined />
                                         </button>
                                     </a>
                                     <Link to = {`/videos/${video.url}`}>
@@ -143,5 +141,16 @@ export default function VideosList(props){
             </div>
         </div>
         </>
+    );
+}
+
+function YoutubeButton(props){
+   const {useScript} = props;
+    useScript("https://apis.google.com/js/platform.js");
+
+    return(
+        <div className = "video-list__content-suscribe-button">
+            <div className="g-ytsubscribe" data-channelid="UCVXjaPiyO1By_PwCI0l4Wjw" data-layout="full" data-theme="dark" data-count="default"></div>
+        </div>
     );
 }
