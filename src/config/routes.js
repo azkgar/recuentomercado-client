@@ -102,6 +102,11 @@ const routes = [
                 path: "/videos",
                 component: Videos,
                 exact: true
+            },
+            {
+                path: "/videos/:url",
+                component: Videos,
+                exact: true
             }
         ]
     }

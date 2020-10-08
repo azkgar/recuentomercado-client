@@ -71,7 +71,7 @@ export default function VideosList(props){
             <div className = "video-list__content">
                 <div className = "video-list__content-suscribe">
                     <h2 className = "video-list__content-suscribe-cta">
-                        ¡Suscribete a El Recuento del Mercado!
+                        ¡Suscríbete a El Recuento del Mercado!
                     </h2>
                     <YoutubeButton useScript = {useScript}/>
                 </div>

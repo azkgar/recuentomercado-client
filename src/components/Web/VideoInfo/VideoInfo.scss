@@ -1,0 +1,243 @@
+@import "../../../scss/index.scss";
+
+@-webkit-keyframes spin{
+    100%{-webkit-transform: rotate(360deg);}
+}
+@-moz-keyframes spin{
+    100%{-webkit-transform: rotate(360deg);}
+}
+@keyframes spin{
+    100%{-webkit-transform: rotate(360deg);}
+}
+
+.logo-spin{
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    top: 50%;
+    left: calc(50% - 40px);
+    -webkit-animation: spin 1s linear infinite;
+    -moz-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+}
+
+.video-info{
+    background-color: $RM-dark-green;
+    overflow: hidden;
+    border-bottom: solid 2px $RM-green;
+    padding-top: 170px;
+
+    &__body{
+        padding-left: 200px;
+        padding-right: 200px;
+        padding-bottom: 100px;
+        overflow: hidden;
+
+        @media (max-width: $s-laptop){
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+
+        @media (max-width: $s-phone){
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        &-return{
+            position: relative;
+            display: block;
+            margin-top: 60px;
+            margin-bottom: 40px;
+            width: 200px;
+            height: 56px;
+            background-color: $RM-white;
+            color: $RM-dark-green;
+            text-transform: uppercase;
+            text-align: right;
+            padding-right: 30px;
+            cursor: pointer;
+            border: none;
+            outline: none;
+
+            font-family: $titles-font;
+            font-size: 16px;
+            transition: width 0.3s ease-out;
+
+            &-arrow{
+                position: absolute;
+                width: 35px;
+                height: 2px;
+                background-color: $RM-dark-green;
+                top: 28px;
+                right: 140px;
+                transition: width 0.3s ease-out;
+
+                &:after{
+                    content: "";
+                    display: inline-block;
+                    width: 10px;
+                    height: 2px;
+                    background-color: $RM-dark-green;
+                    transform: rotate(-45deg);
+                    position: absolute;
+                    top: -3px;
+                    right: 27px;
+                    transition: right 0.3s ease-out;
+                }
+
+                &:before{
+                    content: "";
+                    display: inline-block;
+                    width: 10px;
+                    height: 2px;
+                    background-color: $RM-dark-green;
+                    transform: rotate(45deg);
+                    position: absolute;
+                    top: 3px;
+                    right: 27px;
+                    transition: right 0.3s ease-out;
+                }
+            }
+
+            &:hover{
+                width: 235px;
+                transition: width 0.2s ease-in;
+
+                .video-info__body-return-arrow{
+                    width: 70px;
+                    transition: width 0.2s ease-in;
+
+                    &:after{
+                        right: 62px;
+                        transition: right 0.2s ease-in;
+                    }
+
+                    &:before{
+                        right: 62px;
+                        transition: right 0.2s ease-in;
+                    }
+                }
+            }
+        }
+
+        &-title{
+            margin-top: 70px;
+            font-family: $titles-font;
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 50px;
+            color: $RM-white;
+
+            @media(max-width: $s-phone){
+                font-size: 35px;
+                margin-top: 90px;
+            }
+
+            @media(max-width: $s-phone-s){
+                font-size: 30px;
+            }
+
+            @media(max-width: $s-phone-xs){
+                font-size: 25px;
+            }
+        }
+
+        &-tags{
+            margin-top: 35px;
+            margin-bottom: 50px;
+            display: inline-block;
+            font-family: $titles-font;
+
+            @media(max-width: $s-laptop){
+                display: block;
+            }
+
+            @media(max-width: $s-phone-m){
+                margin-bottom: 40px;
+            }
+            
+            &-item{
+                font-size: 20px;
+                padding: 10px 10px;
+                background-color: $RM-green;
+                color: $RM-white;
+                border: none;
+                cursor: pointer;
+                box-shadow: 0 14px 26px rgba(0,0,0,0.04);
+
+                &:hover{
+                    transform: translateY(-5px) scale(1.005) translateZ(0);
+                    box-shadow: 0 24px 36px rgba(0,0,0,0.11);
+                }
+
+                @media(max-width: $s-phone-m){
+                    margin-bottom: 10px;
+                }
+            }
+        }
+
+        &-date{
+            font-family: $titles-font;
+            font-size: 20px;
+            color: $RM-white;
+            margin-top: 35px;
+            display: inline-block;
+            float: right;
+            
+            @media(max-width: $s-laptop){
+                display: block;
+                margin-top: 0;
+            }
+        }
+
+        &-video{
+            width: 100%;
+            height: calc((100vw - 400px) / 2);
+            text-align: center;
+
+            @media (max-width: $s-laptop){
+                height: calc((100vw - 200px) / 2);
+            }
+    
+            @media (max-width: $s-phone){
+                height: calc((100vw - 60px) / 2);
+            }
+        }
+    }
+
+    &__social{
+        padding-left: 200px;
+        padding-right: 200px;
+        margin-top: 80px;
+        margin-bottom: 80px;
+        text-align: center;
+
+        @media (max-width: $s-laptop){
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+
+        @media (max-width: $s-phone){
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        &-title{
+            font-family: $subtitles-font;
+            font-size: 40px;
+            color: $RM-green;
+            margin-bottom: 35px;
+        }
+
+        .react-share__ShareButton{
+            margin-left: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 14px 26px rgba(255,255,255,0.04);
+
+            &:hover{
+                transform: translateY(-5px) scale(1.005) translateZ(0);
+                box-shadow: 0 24px 36px rgba(255,255,255,0.11);
+            }
+        }
+    }
+}

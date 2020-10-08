@@ -65,7 +65,7 @@ export default function NewsInfo(props) {
 
     if(urlExists === false){
         return <Redirect to = "/not-found"/>
-    } else if (!postInfo || !categories){
+    } else if (!postInfo){
         return(
             <img
                 className = "logo-spin"
@@ -138,7 +138,7 @@ export default function NewsInfo(props) {
                 </div>
                 <div className = "post-info__body-date">
                     <p>
-                        {moment(postInfo.date).local("es-mx").format("LLLL")}
+                        {`${moment(postInfo.date).local("es-mx").format("LLLL")} CDMX`}
                     </p>
                 </div>
                 <div 
