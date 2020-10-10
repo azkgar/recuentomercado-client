@@ -26,28 +26,37 @@
 
     &__header{
         width: 100vw;
-        height: 800px;
+        height: 700px;
+        background-color: $RM-green;
+        display: block;
+        text-align: center;
 
         &-cover{
-            position: absolute;
-            width: 100%;
-            height: 800px;
-
-            @media(max-width: $s-laptop){
-                height: 350px;
-                top: 470px;
-            }
+            margin-top: 180px;
+            padding: auto;
+            width: 50%;
+            height: auto;
+            box-shadow: 0 14px 26px rgba(0,0,0,0.1);
         }
 
-        .filter{
-            width: 100vw;
-            height: 800px;
-            background: transparent linear-gradient(90deg, $RM-green 0%, $RM-green 40%, $RM-white-transparent 100%);
-            position: absolute;
-    
-            @media(max-width: $s-laptop){
-                background: transparent linear-gradient(180deg, $RM-green 0%, $RM-green 60%, $RM-white-transparent 100%);
-            }
+        @media(min-width: $s-4k){
+            height: 1000px;
+        }
+
+        @media(max-width: $s-laptop){
+            height: 550px;
+        }
+
+        @media(max-width: $s-tablet){
+            height: 450px;
+        }
+
+        @media(max-width: $s-phone-m){
+            height: 350px;
+        }
+
+        @media(max-width: $s-phone-xs){
+            height: 320px;
         }
     }
 
