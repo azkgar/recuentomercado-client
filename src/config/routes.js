@@ -18,6 +18,7 @@ import News from "../pages/News";
 import Categories from "../pages/Categories";
 import Videos from "../pages/Videos";
 import Podcast from "../pages/Podcast";
+import Us from "../pages/Us";
 
 //Error Page
 
@@ -112,6 +113,16 @@ const routes = [
             {
                 path: "/podcast",
                 component: Podcast,
+                exact: true
+            },
+            {
+                path: "/podcast/:url",
+                component: Podcast,
+                exact: true
+            },
+            {
+                path: "/nosotros",
+                component: Us,
                 exact: true
             }
         ]
