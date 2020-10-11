@@ -59,7 +59,7 @@ export default function UsPage() {
                             />
                         </Col>
                         <Col xxl = {12} xl = {12} lg = {12} md = {24} sm = {24} xs = {24}>
-                            <p>¿Llevas una vida muy ocupada y no tienes tiempo de estar leyendo noticias? <br/> ¡No te preocupes! <span>😉</span> <br/> <br/> Todos los sábados compartimos un recuento semanal de las noticias más importantes en formato de video y podcast que podrás ver o escuchar cuando quieras.</p>
+                            <p>¿Llevas una vida muy ocupada y no tienes tiempo de estar leyendo noticias? <br/> ¡No te preocupes! <br/> <br/> Todos los sábados compartimos un recuento semanal de las noticias más importantes en formato de video y podcast que podrás ver o escuchar cuando quieras. <span role = "img" aria-label = "guiño guiño">😉</span></p>
                         </Col>
                     </Row>
                 </div>

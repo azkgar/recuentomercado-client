@@ -19,6 +19,7 @@ import Categories from "../pages/Categories";
 import Videos from "../pages/Videos";
 import Podcast from "../pages/Podcast";
 import Us from "../pages/Us";
+import Contact from "../pages/Contact";
 
 //Error Page
 
@@ -123,6 +124,11 @@ const routes = [
             {
                 path: "/nosotros",
                 component: Us,
+                exact: true
+            },
+            {
+                path: "/contacto",
+                component: Contact,
                 exact: true
             }
         ]
