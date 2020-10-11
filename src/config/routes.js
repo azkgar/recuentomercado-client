@@ -22,6 +22,7 @@ import Us from "../pages/Us";
 import Contact from "../pages/Contact";
 
 //Error Page
+import Error from "../pages/Error";
 
 const routes = [
     {
@@ -68,6 +69,9 @@ const routes = [
                 path: "/admin/videos",
                 component: AdminVideos,
                 exact: true
+            },
+            {
+                component: Error
             }
         ]
     },
@@ -130,6 +134,9 @@ const routes = [
                 path: "/contacto",
                 component: Contact,
                 exact: true
+            },
+            {
+                component: Error
             }
         ]
     }

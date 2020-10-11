@@ -1,0 +1,183 @@
+@import "../../../scss/index.scss";
+
+.not-found{
+    width: 100%;
+    background-color: $RM-grey;
+    font-family: $titles-font;
+    margin-top: 160px;
+    margin-left: 0;
+    overflow: hidden;
+
+        @media(max-width: $s-laptop){
+            padding-top: 106px;
+        }
+        @media(max-width: $s-phone){
+            padding-top: 85px;
+        }
+        &-image{
+            width: 100%;
+            height: auto;
+        }
+
+    &__title{
+        font-size: 90px;
+        margin-bottom: 90px;
+        text-align: center;
+        color: $RM-dark-green;
+
+        @media(max-width: $s-tablet){
+            font-size: 70px;
+        }
+
+        @media(max-width: $s-phone-m){
+            font-size: 40px;
+        }
+
+    }
+
+    &__content{
+        position: relative;
+        padding-left: 200px;
+        padding-right: 200px;
+        padding-bottom: 100px;
+
+        @media (max-width: $s-laptop){
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+
+        @media (max-width: $s-phone){
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        img{
+            width: 100%;
+            height: auto;
+
+            @media(max-width: $s-tablet){
+                margin-bottom: 50px;
+            }
+        }
+        
+        p{
+            font-size: 40px;
+            width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0;
+            line-height: 1.5;
+            color: $RM-dark-green;
+
+            span{
+                color: $RM-green;
+            }
+
+            @media(max-width: $s-laptop){
+                width: 380px;
+                font-size: 30px;
+                line-height: 1.3;
+            }
+
+            @media(max-width: $s-tablet){
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        &-button{
+            display: inline-block;
+            width: 170px;
+            height: 56px;
+            background-color: $RM-dark-green;
+            color: $RM-white;
+            text-transform: uppercase;
+            text-align: left;
+            padding-left: 10px;
+            margin-top: 15px;
+            margin-left: 20px;
+            font-size: 16px;
+            transition: width 0.3s ease-out;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            position: relative;
+
+            @media(min-width: $s-4k){
+                margin-left: 120px;
+            }
+
+            @media(max-width: $s-tablet){
+                margin-left: 70px;
+            }
+
+            @media(max-width: $s-phone-m){
+                margin-left: 100px;
+            }
+
+            @media(max-width: $s-phone-s){
+                margin-left: 80px;
+            }
+
+            @media(max-width: $s-phone-s){
+                margin-left: 50px;
+            }
+
+            &-arrow{
+                position: absolute;
+                width: 35px;
+                height: 2px;
+                background-color: $RM-white;
+                top: 27px;
+                left: 120px;
+                transition: width 0.3s ease-out;
+
+                &:after{
+                    content: "";
+                    display: inline-block;
+                    width: 10px;
+                    height: 2px;
+                    background-color: $RM-white;
+                    transform: rotate(45deg);
+                    position: absolute;
+                    top: -3px;
+                    left: 27px;
+                    transition: left 0.3s ease-out;
+                }
+
+                &:before{
+                    content: "";
+                    display: inline-block;
+                    width: 10px;
+                    height: 2px;
+                    background-color: $RM-white;
+                    transform: rotate(-45deg);
+                    position: absolute;
+                    top: 3px;
+                    left: 27px;
+                    transition: left 0.3s ease-out; 
+                }
+            }
+
+            &:hover{
+                width: 205px;
+                transition: width 0.2s ease-in;
+
+                .not-found__content-button-arrow{
+                    width: 70px;
+                    transition: width 0.2s ease-in;
+
+                    &:after{
+                        left: 62px;
+                        transition: left 0.2s ease-in;
+                    }
+
+                    &:before{
+                        left: 62px;
+                        transition: left 0.2s ease-in;
+                    }
+                }
+            }
+        }
+    }
+}
