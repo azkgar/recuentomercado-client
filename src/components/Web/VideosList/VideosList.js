@@ -59,7 +59,66 @@ export default function VideosList(props){
 
     return(
         <>
-        <Helmet></Helmet>
+        <Helmet>
+            <title>
+                Videos | El Recuento del Mercado
+            </title>
+            <meta
+                name = "description" 
+                content = "Mira las noticias más relevantes de las empresas que cotizan en bolsa y aprende a invertir de manera responsable."
+            />
+            <link
+                rel = "canonical" href = "https://recuentomercado.com/videos"
+            />
+            <meta
+                property = "og:title"
+                content = "Videos | El Recuento del Mercado"
+            />
+            <meta
+                property = "og:description"
+                content = "Mira las noticias más relevantes de las empresas que cotizan en bolsa y aprende a invertir de manera responsable."
+            />
+            <meta
+                property = "og:locale"
+                content = "es_MX"
+            />
+            <meta
+                property = "og:type"
+                content = "website"
+            />
+            <meta
+                property = "og:url"
+                content = {window.location.pathname + window.location.search}
+            />
+            <meta
+                property = "og:image"
+                content = "http://recuentomercado.com/mstile-310x310.png"
+            />
+            <meta
+                property = "og:image:secure_url"
+                content = "https://recuentomercado.com/mstile-310x310.png"
+            />
+            <meta
+                property = "og:image:type"
+                content = "image/png"
+            />
+            <meta
+                property = "og:image:width"
+                content = "310"
+            />
+            <meta
+                property = "og:image:height"
+                content = "310"
+            />
+            <meta
+                property = "og:image:alt"
+                content = "El Recuento del Mercado"
+            />
+            <meta
+                property = "og:site_name"
+                content = "El Recuento del Mercado"
+            />
+        </Helmet>
         <div className = "video-list">
             <div className = "video-list__banner">
                 <img

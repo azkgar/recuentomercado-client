@@ -2,7 +2,6 @@ import React, {useState, useEffect, useRef} from "react";
 import {Form, Input, Button, List, Divider} from "antd";
 import {SearchOutlined, FontSizeOutlined} from "@ant-design/icons";
 import {Link} from "react-router-dom";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {getAllPostsApi} from "../../../api/post";
 
 import "./SearchBar.scss";

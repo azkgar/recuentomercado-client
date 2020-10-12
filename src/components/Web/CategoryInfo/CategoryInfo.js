@@ -48,7 +48,65 @@ export default function CategoryInfo(props) {
     
     return(
         <>
-            <Helmet></Helmet>
+            <Helmet>
+                <title>{`${tag.toUpperCase()}`} | El Recuento del Mercado</title>
+                <meta
+                    name = "description"
+                    content = {`Artículos relacionados con ${tag.toUpperCase()}`}
+                />
+                <link
+                    rel = "canonical"
+                    href = {`https://recuentomercado.com/categorias/${tag}`}
+                />
+                <meta
+                    property = "og:title"
+                    content = {`${tag.toUpperCase()} | El Recuento del Mercado`}
+                />
+                <meta 
+                    property = "og:description" 
+                    content =  {`Artículos relacionados con ${tag.toUpperCase()}`}
+                />
+                <meta 
+                    property = "og:locale" 
+                    content = "es_MX"
+                />
+                <meta 
+                    property = "og:type" 
+                    content = "website"
+                />
+                <meta 
+                    property = "og:url" 
+                    content =  {window.location.pathname + window.location.search}
+                />
+                <meta 
+                    property = "og:image" 
+                    content = {avatar} 
+                />
+                <meta 
+                    property = "og:image:secure_url" 
+                    content = {avatar}
+                />
+                <meta 
+                    property = "og:image:type" 
+                    content = "image/jpg" 
+                />
+                <meta 
+                    property = "og:image:width" 
+                    content = "1920" 
+                />
+                <meta 
+                    property = "og:image:height" 
+                    content = "1080" 
+                />
+                <meta 
+                    property = "og:image:alt"
+                    content = {tag.toUpperCase()} 
+                />
+                <meta 
+                    property = "og:site_name" 
+                    content = "El Recuento del Mercado" 
+                />
+            </Helmet>
             <div className = "category">
                 <ScrollTopButton/>
                 <div className= "category__header">

@@ -11,14 +11,14 @@ export default function Home() {
     return(
         <>
             <Helmet>
-                <title> Recuento Mercado | Inicio </title>
+                <title> El Recuento del Mercado</title>
                 <meta
                     name = "description"
-                    content = "Las noticias más relevantes de las empresas"
+                    content = "Sigue de cerca las noticias de tus empresas. Aprende a invertir en la bolsa de manera responsable con nuestros artículos, videos y podcast."
                 />
                 <link
                     rel = "canonical"
-                    href = "https://recuentomercado.com"
+                    href = "https://recuentomercado.com/"
                 />
                 <meta
                     property = "og:title" 
@@ -42,11 +42,11 @@ export default function Home() {
                 />
                 <meta
                     property = "og:image"
-                    content = "url"
+                    content = "http://recuentomercado.com/mstile-310x310.png"
                 />
                 <meta
                     property = "og:image:secure_url"
-                    content = "url"
+                    content = "https://recuentomercado.com/mstile-310x310.png"
                 />
                 <meta
                     property = "og:image:type"

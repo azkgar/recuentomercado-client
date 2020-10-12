@@ -51,7 +51,7 @@ export default function NewsList(props){
             </title>
             <meta
                 name = "description" 
-                content = "Página principal de Artículos de El Recuento del Mercado. El lugar donde encontrarás las noticias más relevantes de las empresas que cotizan en bolsa y algunos tips para iniciar en este apacionante mundo de las inversiones en la bolsa de valores."
+                content = "Encuentra las noticias más relevantes de las empresas que cotizan en bolsa y aprende a invertir de manera responsable."
             />
             <link
                 rel = "canonical" href = "https://recuentomercado.com/articulos"
@@ -62,7 +62,7 @@ export default function NewsList(props){
             />
             <meta
                 property = "og:description"
-                content = "Página principal de Artículos de El Recuento del Mercado. El lugar donde encontrarás las noticias más relevantes de las empresas que cotizan en bolsa y algunos tips para iniciar en este apacionante mundo de las inversiones en la bolsa de valores."
+                content = "Encuentra las noticias más relevantes de las empresas que cotizan en bolsa y aprende a invertir de manera responsable."
             />
             <meta
                 property = "og:locale"
@@ -78,11 +78,11 @@ export default function NewsList(props){
             />
             <meta
                 property = "og:image"
-                content = ""
+                content = "http://recuentomercado.com/mstile-310x310.png"
             />
             <meta
                 property = "og:image:secure_url"
-                content = ""
+                content = "https://recuentomercado.com/mstile-310x310.png"
             />
             <meta
                 property = "og:image:type"

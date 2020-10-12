@@ -12,6 +12,66 @@ import "./UsPage.scss";
 
 export default function UsPage() {
     return(
+        <>
+            <Helmet>
+                <title> El Recuento del Mercado</title>
+                <meta
+                    name = "description"
+                    content = "Recopilamos las noticias más importantes relacionadas a las empresas que cotizan en la bolsa de valores e impulsamos el tema de las inversiones responsables."
+                />
+                <link
+                    rel = "canonical"
+                    href = "https://recuentomercado.com/nosotros/"
+                />
+                <meta
+                    property = "og:title"
+                    content = "El Recuento del Mercado"
+                />
+                <meta 
+                    property = "og:description" 
+                    content =  "Recopilamos las noticias más importantes relacionadas a las empresas que cotizan en la bolsa de valores e impulsamos el tema de las inversiones responsables."
+                />
+                <meta 
+                    property = "og:locale" 
+                    content = "es_MX"
+                />
+                <meta 
+                    property = "og:type" 
+                    content = "website"
+                />
+                <meta 
+                    property = "og:url" 
+                    content =  {window.location.pathname + window.location.search}
+                />
+                <meta 
+                    property = "og:image" 
+                    content = "http://recuentomercado.com/mstile-310x310.png" 
+                />
+                <meta 
+                    property = "og:image:secure_url" 
+                    content = "https://recuentomercado.com/mstile-310x310.png"
+                />
+                <meta 
+                    property = "og:image:type" 
+                    content = "image/png" 
+                />
+                <meta 
+                    property = "og:image:width" 
+                    content = "310" 
+                />
+                <meta 
+                    property = "og:image:height" 
+                    content = "310" 
+                />
+                <meta 
+                    property = "og:image:alt"
+                    content = "El Recuento del Mercado" 
+                />
+                <meta 
+                    property = "og:site_name" 
+                    content = "El Recuento del Mercado" 
+                />
+            </Helmet>
         <div className = "us-page">
             <div className = "us-page__header">
                 <img
@@ -79,5 +139,6 @@ export default function UsPage() {
                 </div>
             </div>
         </div>
+        </>
     );
 }

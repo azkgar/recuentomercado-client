@@ -10,7 +10,6 @@ import {EmailShareButton, EmailIcon, FacebookShareButton, FacebookIcon, Pinteres
 import {getVideoApi} from "../../../api/video";
 import {getCategoryTagApi} from "../../../api/category";
 import Icono from "../../../assets/img/svg/RM-logo-icono.svg";
-import Banner from "../../../assets/img/jpg/recuento-mercado-videos.jpg";
 import ScrollTopButton from "../ScrollTopButton";
 
 import "./VideoInfo.scss";
@@ -78,7 +77,61 @@ export default function VideoInfo(props) {
 
     return(
         <>
-        <Helmet></Helmet>
+        <Helmet>
+            <title> {videoInfo.title} | El Recuento del Mercado</title>
+            <meta 
+                name = "description" 
+                content =  {videoInfo.description}
+            />
+            <link 
+                rel = "canonical" 
+                href = {`https://recuentomercado.com/videos/${videoInfo.url}`}
+            />
+            <meta 
+                property = "og:title" 
+                content =  {`${videoInfo.title} | El Recuento del Mercado`}
+            />
+            <meta 
+                property = "og:description" 
+                content =  {videoInfo.description}
+            />
+            <meta 
+                property = "og:locale" 
+                content = "es_MX"
+            />
+            <meta 
+                property = "og:url" 
+                content =  {window.location.pathname + window.location.search}
+            />
+            <meta 
+                property = "og:image" 
+                content = {videoInfo.cover} 
+            />
+            <meta 
+                property = "og:image:secure_url" 
+                content = {videoInfo.cover} 
+            />
+            <meta 
+                property = "og:image:type" 
+                content = "image/jpg" 
+            />
+            <meta 
+                property = "og:image:width" 
+                content = "1280" 
+            />
+            <meta 
+                property = "og:image:height" 
+                content = "720" 
+            />
+            <meta 
+                property = "og:image:alt" 
+                content = {videoInfo.title} 
+            />
+            <meta 
+                property = "og:site_name" 
+                content = "El Recuento del Mercado" 
+            />
+        </Helmet>
         <div className = "video-info">
             <ScrollTopButton/>
             <div className = "video-info__body">

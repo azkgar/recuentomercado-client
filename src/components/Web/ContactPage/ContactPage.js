@@ -6,14 +6,71 @@ import Banner from "../../../assets/img/jpg/recuento-mercado-contacto.jpg";
 import Hi from "../../../assets/img/svg/undraw_mobile_messages_u848.svg";
 import Colaborate from "../../../assets/img/svg/undraw_collaborators_prrw.svg";
 import Social from "../../../assets/img/svg/undraw_contact_us_15o2.svg";
-import Google from "../../../assets/img/png/Google_Podcasts_Icon_3x.png";
-import Apple from "../../../assets/img/png/Recurso 2@3x.png";
-import Spotify from "../../../assets/img/png/Spotify.png";
 
 import "./ContactPage.scss";
 
 export default function ContactPage() {
     return(
+        <>
+            <Helmet>
+                <title>Contacto | El Recuento del Mercado</title>
+                <meta
+                    name = "description"
+                    content = "¡Hola! Encuentra las cuentas de correo y ligas a redes sociales en donde nos puedes encontrar."
+                />
+                <link
+                    rel = "canonical"
+                    href = "https://recuentomercado.com/contacto/"
+                />
+                <meta
+                    property = "og:title"
+                    content = "Contacto | El Recuento del Mercado"
+                />
+                <meta 
+                    property = "og:description" 
+                    content =  "¡Hola! Encuentra las cuentas de correo y ligas a redes sociales en donde nos puedes encontrar."
+                />
+                <meta 
+                    property = "og:locale" 
+                    content = "es_MX"
+                />
+                <meta 
+                    property = "og:type" 
+                    content = "website"
+                />
+                <meta 
+                    property = "og:url" 
+                    content =  {window.location.pathname + window.location.search}
+                />
+                <meta 
+                    property = "og:image" 
+                    content = "http://recuentomercado.com/mstile-310x310.png" 
+                />
+                <meta 
+                    property = "og:image:secure_url" 
+                    content = "https://recuentomercado.com/mstile-310x310.png"
+                />
+                <meta 
+                    property = "og:image:type" 
+                    content = "image/png" 
+                />
+                <meta 
+                    property = "og:image:width" 
+                    content = "310" 
+                />
+                <meta 
+                    property = "og:image:height" 
+                    content = "310" 
+                />
+                <meta 
+                    property = "og:image:alt"
+                    content = "El Recuento del Mercado" 
+                />
+                <meta 
+                    property = "og:site_name" 
+                    content = "El Recuento del Mercado" 
+                />
+            </Helmet>
         <div className = "contact">
             <div className = "contact__header">
                 <img
@@ -146,5 +203,6 @@ export default function ContactPage() {
                 </div>
             </div>
         </div>
+        </>
     );
 }
