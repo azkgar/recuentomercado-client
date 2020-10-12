@@ -169,7 +169,6 @@ export default function VideoInfo(props) {
                     <ReactPlayer 
                         url = {videoInfo.link}
                         controls = "true"
-                        //light = {videoInfo.cover}
                         width = "100%"
                         height = "100%"
                         pip = "true"

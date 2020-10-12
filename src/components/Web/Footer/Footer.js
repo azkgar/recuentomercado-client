@@ -3,6 +3,7 @@ import {Layout} from "antd";
 import moment from "moment";
 import MenuList from "./MenuList";
 import SocialList from "./SocialList";
+import TermsPrivacyList from "./TermsPrivacyList";
 import Logo from "../../../assets/img/svg/RM-logo-icono.svg";
 
 import "./Footer.scss";
@@ -25,6 +26,7 @@ export default function Home(){
                     Copyright {moment().year()} El Recuento del Mercado. Derechos reservados.
                 </p>
             </div>
+            <TermsPrivacyList/>
         </Footer>
     );
 }

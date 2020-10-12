@@ -2,17 +2,17 @@
 
 .footer{
     background-color: $RM-dark-green;
-    height: 320px;
+    height: 380px;
     text-align: center;
     overflow: hidden;
     position: relative;
 
     @media(max-width: $s-phone){
-        height: 500px;
+        height: 610px;
     }
 
     @media(max-width: $s-phone-xs){
-        height: 580px;
+        height: 700px;
     }
 
     &__icon{

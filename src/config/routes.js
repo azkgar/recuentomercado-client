@@ -20,6 +20,8 @@ import Videos from "../pages/Videos";
 import Podcast from "../pages/Podcast";
 import Us from "../pages/Us";
 import Contact from "../pages/Contact";
+import ConditionsTerms from "../pages/ConditionsTerms";
+import PrivacyPolicy from "../pages/PrivacyPolicy";
 
 //Error Page
 import Error from "../pages/Error";
@@ -133,6 +135,16 @@ const routes = [
             {
                 path: "/contacto",
                 component: Contact,
+                exact: true
+            },
+            {
+                path: "/terminos-y-condiciones",
+                component: ConditionsTerms,
+                exact: true
+            },
+            {
+                path: "/aviso-de-privacidad",
+                component: PrivacyPolicy,
                 exact: true
             },
             {

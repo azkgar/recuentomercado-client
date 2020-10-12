@@ -1,0 +1,29 @@
+@import "../../../../scss/index.scss";
+
+.footer-privacy{
+    width: 100%;
+    display: inline-block;
+    font-family: $titles-font;
+    font-size: 16px;
+
+    &__link{
+        margin-top: 14px;
+        margin-right: 32px;
+        display: inline-block;
+
+        @media(max-width: $s-phone){
+            margin-top: 20px;
+            margin-right: 15px;
+        }
+
+        p{
+            color: $RM-white;
+        }
+
+        &:hover{
+            p{
+                color: $RM-green;
+            }
+        }
+    }
+}
