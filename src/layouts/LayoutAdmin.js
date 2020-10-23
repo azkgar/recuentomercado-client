@@ -11,7 +11,7 @@ import "./LayoutAdmin.scss";
 
 export default function LayoutAdmin(props){
     const {routes} = props;
-    const [menuCollapsed, setMenuCollapsed] = useState(true);
+    const [menuCollapsed, setMenuCollapsed] = useState(false);
     const {Header, Content, Footer} = Layout;
     const {user, isLoading} = useAuth();
 

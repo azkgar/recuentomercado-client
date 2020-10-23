@@ -82,7 +82,7 @@
             display: block;
             margin-top: 60px;
             margin-bottom: 40px;
-            width: 200px;
+            width: 210px;
             height: 56px;
             background-color: $RM-dark-green;
             color: $RM-white;
@@ -103,7 +103,7 @@
                 height: 2px;
                 background-color: $RM-white;
                 top: 28px;
-                right: 140px;
+                right: 150px;
                 transition: width 0.3s ease-out;
 
                 &:after{
@@ -137,7 +137,7 @@
                 width: 235px;
                 transition: width 0.2s ease-in;
 
-                .post-info__body-return-arrow{
+                .category__body-return-arrow{
                     width: 70px;
                     transition: width 0.2s ease-in;
 

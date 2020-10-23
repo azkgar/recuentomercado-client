@@ -26,7 +26,7 @@ export default function TermsConditions() {
         </Helmet>
         <div className = "terms-conditions">
            <h1>Términos y Condiciones</h1>
-            <p className = "terms-conditions__free">Toda la información, material y uso de El Recuento del Mercado es exclusivamente <strong>para fines educativos e ilustrativos.</strong> El Recuento del Mercado no proporciona servicios de asessoría o gestión de inversiones, únicamente de educación financiera y no pretende constituir asesoría de inversión, recomendación, oferta ni invitación para adquirir o vender valores.</p>
+            <p className = "terms-conditions__free">Toda la información, material y uso de El Recuento del Mercado es exclusivamente <strong>para fines educativos e ilustrativos.</strong> El Recuento del Mercado no proporciona servicios de asesoría o gestión de inversiones, únicamente de educación financiera y no pretende constituir asesoría de inversión, recomendación, oferta ni invitación para adquirir o vender valores.</p>
             <br/>
             <br/>
             <p>A los Usuarios, les informamos que los siguientes Términos y Condiciones les son aplicables por el simple uso o acceso a cualquiera de las páginas, aplicaciones web y móviles, softwares y, aplicaciones en general, que integran el Portal de <a href = "/" target = "_blank" rel = "noopener noreferrer" >recuentomercado.com</a> (en adelante y, conjunta e indistintamente, el "Portal"), por lo que entenderemos que los acepta y acuerda con obligarse a su cumplimiento. <strong>En el caso de que no esté de acuerdo con los Términos y Condiciones deberá abstenerse de acceder o utilizar el Portal.</strong></p>

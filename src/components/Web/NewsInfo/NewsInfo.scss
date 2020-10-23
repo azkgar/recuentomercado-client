@@ -6,15 +6,32 @@
     &__header{
         width: 100vw;
         height: 800px;
+        position: relative;
+
+        @media(max-width: $s-laptop){
+            height: 1000px;
+        }
+
+        @media(max-width: $s-phone){
+            height: 800px;
+        }
 
         &-cover{
             position: absolute;
-            width: 100%;
+            width: auto;
             height: 800px;
+            right: 0;
 
             @media(max-width: $s-laptop){
-                height: 350px;
-                top: 470px;
+                width: 100vw;
+                height: auto;
+                bottom: 0;
+            }
+
+            @media(max-width: $s-phone){
+                width: 100vw;
+                height: auto;
+                bottom: 0;
             }
         }
         .filter{
@@ -23,8 +40,20 @@
             background: transparent linear-gradient(90deg, $RM-green 0%, $RM-green 40%, $RM-white-transparent 100%);
             position: absolute;
     
+            @media(min-width: $s-4k){
+                background: transparent linear-gradient(90deg, $RM-green 0%, $RM-green 50%, $RM-white-transparent 100%);
+            }
+
             @media(max-width: $s-laptop){
                 background: transparent linear-gradient(180deg, $RM-green 0%, $RM-green 60%, $RM-white-transparent 100%);
+            }
+
+            @media(max-width: 768px){
+                background: transparent linear-gradient(180deg, $RM-green 0%, $RM-green 80%, $RM-white-transparent 100%);
+            }
+
+            @media(max-width: $s-phone){
+                background: transparent linear-gradient(180deg, $RM-green 0%, $RM-green 80%, $RM-white-transparent 100%);
             }
         }
         &-title{
@@ -101,7 +130,7 @@
             }
     
             @media (max-width: $s-phone-m) {
-                top:350px;
+                top:400px;
             }
     
             @media (max-width: $s-phone-xs) {
@@ -270,6 +299,11 @@
 
             p{
                 line-height: 45px;
+                margin-bottom: 55px
+            }
+
+            ul, ol{
+                line-height: 40px;
                 margin-bottom: 60px
             }
 

@@ -89,6 +89,9 @@ export default function AddEditPostForm(props) {
         });
     }
 
+    const pinterestDomain = "https://recuentomercado.com/imagenes/pinterest/"
+    const coverDomain = "https://recuentomercado.com/imagenes/portadas/"
+
     return(
         <div className = "add-edit-post-form">
             <AddEditForm
@@ -98,13 +101,15 @@ export default function AddEditPostForm(props) {
                 processPost = {processPost}
                 userData = {userData}
                 categories = {categories}
+                pinterestDomain = {pinterestDomain}
+                coverDomain = {coverDomain}
             />
         </div>
     );
 }
 
 function AddEditForm(props) {
-    const {postData, setPostData, post, processPost, userData, categories} = props;
+    const {postData, setPostData, post, processPost, userData, categories, pinterestDomain, coverDomain} = props;
 
     return(
         <Form
@@ -198,7 +203,7 @@ function AddEditForm(props) {
                                 icon = {["fab", "google"]}
                                 className = "pinterest"
                             />}
-                            placeholder = "Descripción par Google SEO"
+                            placeholder = "Descripción para Google SEO"
                             value = {postData.description}
                             onChange = {e => setPostData({...postData, description: e.target.value})}
                             className = "pinterest-cover-image"

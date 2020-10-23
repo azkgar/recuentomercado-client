@@ -6,7 +6,7 @@ import {Redirect, Link} from "react-router-dom";
 import {Helmet} from "react-helmet";
 import ReactGa from "react-ga";
 import {EmailShareButton, EmailIcon, FacebookShareButton, FacebookIcon, PinterestShareButton, PinterestIcon, TwitterShareButton, TwitterIcon, WhatsappShareButton, WhatsappIcon, FacebookMessengerShareButton, FacebookMessengerIcon, LinkedinShareButton, LinkedinIcon, TelegramShareButton, TelegramIcon} from "react-share";
-import HyvorTalk from "hyvor-talk-react";
+import commentBox from "commentbox.io";
 import {getPostApi} from "../../../api/post";
 import {getCategoryTagApi} from "../../../api/category";
 import Icono from "../../../assets/img/svg/RM-logo-icono.svg";
@@ -21,6 +21,8 @@ export default function NewsInfo(props) {
     const socialUrl = "https://recuentomercado.com/articulos/";
     const [categories, setCategories] = useState([]);
     const [complete, setComplete] = useState(false);
+
+    commentBox("5645109064368128-proj");
 
     useEffect(() => {
         getPostApi(url)
@@ -260,10 +262,7 @@ export default function NewsInfo(props) {
                 </TelegramShareButton>
             </div>
             <div className = "post-info__comments">
-                   <HyvorTalk.Embed
-                       websiteId = {2098}
-                       id = {postInfo._id}
-                   /> 
+                   <div className = "commentbox"/>
             </div>
         </div>
         </>

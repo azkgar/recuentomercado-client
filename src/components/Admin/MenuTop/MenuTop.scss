@@ -21,6 +21,7 @@
         &-logo {
             width: 240px;
             padding: 0 10px;
+            margin-left: 10px;
 
             @media(max-width: $s-phone-m){
                 width: 200px;

@@ -121,7 +121,7 @@ export default function CategoryInfo(props) {
                     <Link to = "/categorias">
                         <button className = "category__body-return">
                             <div className = "category__body-return-arrow"></div>
-                            Regresar
+                            Categorías
                         </button>
                     </Link>
                     <h2 className = "category__body-title">

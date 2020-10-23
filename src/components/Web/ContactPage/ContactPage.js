@@ -111,11 +111,11 @@ export default function ContactPage() {
                         Si te interesa promover un producto, servicio o empresa en nuestra página, contratar un curso, una conferencia o invitarnos a colaborar contigo manda un correo a:
                         <br/>
                         <a
-                            href = "mailto:contrataciones@recuentomercado.com"
+                            href = "mailto:contrato@recuentomercado.com"
                             target = "_top"
                             rel = "noopener no referrer"
                         >
-                            contrataciones@recuentomercado.com
+                            contrato@recuentomercado.com
                         </a>
                     </p>
                 </div>

@@ -3,8 +3,6 @@ import {Route, Switch} from "react-router-dom";
 import NavBar from "../components/Web/NavBar";
 import Footer from "../components/Web/Footer";
 
-import "./LayoutBasic.scss";
-
 export default function LayoutBasic(props){
     const {routes} = props;
 

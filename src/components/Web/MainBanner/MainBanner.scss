@@ -25,15 +25,18 @@
     width: 100vw;
     height: 940px;
     overflow: hidden;
+    position:relative;
 
     img{
         position: absolute;
-        width: 100%;
+        width: auto;
         height: 940px;
+        right: 0;
 
         @media(max-width: $s-laptop){
-            height: 470px;
-            top: 470px;
+            width: 100vw;
+            height: auto;
+            bottom: 0;
         }
     }
 
@@ -43,8 +46,16 @@
         background: transparent linear-gradient(90deg, $RM-green 0%, $RM-green 40%, $RM-white-transparent 100%);
         position: absolute;
 
+        @media(min-width: $s-4k){
+            background: transparent linear-gradient(90deg, $RM-green 0%, $RM-green 50%, $RM-white-transparent 100%);
+        }
+
         @media(max-width: $s-laptop){
-            background: transparent linear-gradient(180deg, $RM-green 0%, $RM-green 60%, $RM-white-transparent 100%);
+            background: transparent linear-gradient(180deg, $RM-green 0%, $RM-green 62%, $RM-white-transparent 100%);
+        }
+
+        @media(max-width: $s-phone){
+            background: transparent linear-gradient(180deg, $RM-green 0%, $RM-green 80%, $RM-white-transparent 100%);
         }
     }
 
@@ -113,11 +124,12 @@
         }
 
         @media (max-width: $s-phone-m) {
-            top:350px;
+            top:400px;
         }
 
         @media (max-width: $s-phone-xs) {
             font-size: 15px;
+            top: 400px;
         }
     }
 

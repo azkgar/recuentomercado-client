@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import {Form, Input, Button, notification} from "antd";
-import {TagOutlined, FileImageOutlined} from "@ant-design/icons";
+import {TagOutlined, FileImageOutlined,LinkOutlined} from "@ant-design/icons";
 import {addCategoryApi} from "../../../../api/category";
 import {getAccessTokenApi} from "../../../../api/auth";
 
@@ -14,7 +14,8 @@ export default function AddCategoryForm(props) {
         event.preventDefault();
         let finalData = {
           tag: categoriesData.tag,
-          url: categoriesData.url
+          url: categoriesData.url,
+          avatar: categoriesData.avatar
         };
     
         if (!finalData.tag || !finalData.url) {
@@ -71,7 +72,7 @@ function AddForm(props) {
             </Form.Item>
             <Form.Item>
                 <Input 
-                    prefix = {<TagOutlined />}
+                    prefix = {<LinkOutlined />}
                     placeholder = "url"
                     value = {categoriesData.url}
                     onChange = {e => setCategoriesData({...categoriesData, url: e.target.value})}

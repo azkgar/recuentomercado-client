@@ -6,20 +6,27 @@ import "./StocksBanner.scss";
 
 export default function StocksBanner(){
     
+    function formatThousands(num) {
+        let values = num.toString().split('.');
+        return values[0].replace(/.(?=(?:.{3})+$)/g, '$&,') + ( values.length == 2 ? '.' + values[1] : '' )
+    }
     
     return(
     <div className = "stocks-banner">
-        <Gold />
-        <SP500/>
-        <DOW/>
-        <NASDAQ/>
-        <RUSSELL/>
-        <Oil/>
+        <Gold 
+            formatThousands = {formatThousands}
+        />
+        <SP500 formatThousands = {formatThousands} />
+        <DOW formatThousands = {formatThousands} />
+        <NASDAQ formatThousands = {formatThousands} />
+        <RUSSELL formatThousands = {formatThousands} />
+        <Oil formatThousands = {formatThousands} />
     </div>
     );
 }
 
-function Gold() {
+function Gold(props) {
+    const {formatThousands} = props;
     const ticker = "GC=F";
     const [regularMarketPrice, setRegularMarketPrice] = useState();
     const [regularMarketChange, setRegularMarketChange] = useState();
@@ -33,7 +40,7 @@ function Gold() {
         si.getSingleStockInfo(ticker).then(response => {
             const price = response.regularMarketPrice;
             const priceRound = Math.round(price * 100) / 100;
-            const priceComma = priceRound.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")
+            const priceComma = formatThousands(priceRound);
             setRegularMarketPrice(priceComma);
             setRegularMarketChange(response.regularMarketChange);
             setRegularMarketChangePercent(response.regularMarketChangePercent);
@@ -79,6 +86,8 @@ function Gold() {
         }
     }
 
+
+
     if(!regularMarketPrice){
         return(null);
     }
@@ -104,7 +113,8 @@ function Gold() {
     );
 }
 
-function SP500() {
+function SP500(props) {
+    const {formatThousands} = props;
     const ticker = "^GSPC";
     const [regularMarketPrice, setRegularMarketPrice] = useState();
     const [regularMarketChange, setRegularMarketChange] = useState();
@@ -118,7 +128,7 @@ function SP500() {
         si.getSingleStockInfo(ticker).then(response => {
             const price = response.regularMarketPrice;
             const priceRound = Math.round(price * 100) / 100;
-            const priceComma = priceRound.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")
+            const priceComma = formatThousands(priceRound);
             setRegularMarketPrice(priceComma);
             setRegularMarketChange(response.regularMarketChange);
             setRegularMarketChangePercent(response.regularMarketChangePercent);
@@ -189,7 +199,8 @@ function SP500() {
     );
 }
 
-function DOW() {
+function DOW(props) {
+    const {formatThousands} = props
     const ticker = "^DJI";
     const [regularMarketPrice, setRegularMarketPrice] = useState();
     const [regularMarketChange, setRegularMarketChange] = useState();
@@ -203,7 +214,7 @@ function DOW() {
         si.getSingleStockInfo(ticker).then(response => {
             const price = response.regularMarketPrice;
             const priceRound = Math.round(price * 100) / 100;
-            const priceComma = priceRound.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")
+            const priceComma = formatThousands(priceRound);
             setRegularMarketPrice(priceComma);
             setRegularMarketChange(response.regularMarketChange);
             setRegularMarketChangePercent(response.regularMarketChangePercent);
@@ -274,7 +285,8 @@ function DOW() {
     );
 }
 
-function NASDAQ() {
+function NASDAQ(props) {
+    const {formatThousands} = props;
     const ticker = "^IXIC";
     const [regularMarketPrice, setRegularMarketPrice] = useState();
     const [regularMarketChange, setRegularMarketChange] = useState();
@@ -288,7 +300,7 @@ function NASDAQ() {
         si.getSingleStockInfo(ticker).then(response => {
             const price = response.regularMarketPrice;
             const priceRound = Math.round(price * 100) / 100;
-            const priceComma = priceRound.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")
+            const priceComma = formatThousands(priceRound);
             setRegularMarketPrice(priceComma);
             setRegularMarketChange(response.regularMarketChange);
             setRegularMarketChangePercent(response.regularMarketChangePercent);
@@ -359,7 +371,8 @@ function NASDAQ() {
     );
 }
 
-function RUSSELL() {
+function RUSSELL(props) {
+    const {formatThousands} = props;
     const ticker = "^RUT";
     const [regularMarketPrice, setRegularMarketPrice] = useState();
     const [regularMarketChange, setRegularMarketChange] = useState();
@@ -373,7 +386,7 @@ function RUSSELL() {
         si.getSingleStockInfo(ticker).then(response => {
             const price = response.regularMarketPrice;
             const priceRound = Math.round(price * 100) / 100;
-            const priceComma = priceRound.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")
+            const priceComma = formatThousands(priceRound);
             setRegularMarketPrice(priceComma);
             setRegularMarketChange(response.regularMarketChange);
             setRegularMarketChangePercent(response.regularMarketChangePercent);
@@ -444,7 +457,8 @@ function RUSSELL() {
     );
 }
 
-function Oil() {
+function Oil(props) {
+    const {formatThousands} = props
     const ticker = "CL=F";
     const [regularMarketPrice, setRegularMarketPrice] = useState();
     const [regularMarketChange, setRegularMarketChange] = useState();
@@ -458,7 +472,7 @@ function Oil() {
         si.getSingleStockInfo(ticker).then(response => {
             const price = response.regularMarketPrice;
             const priceRound = Math.round(price * 100) / 100;
-            const priceComma = priceRound.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")
+            const priceComma = formatThousands(priceRound);
             setRegularMarketPrice(priceComma);
             setRegularMarketChange(response.regularMarketChange);
             setRegularMarketChangePercent(response.regularMarketChangePercent);
