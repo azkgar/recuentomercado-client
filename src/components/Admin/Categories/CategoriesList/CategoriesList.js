@@ -58,7 +58,10 @@ export default function CategoriesList(props) {
         .then( response => {
                 notification["success"]({message: response});
             }
-        );
+        )
+        .catch(() => {
+            notification["error"]({message: "Error del servidor"});
+        });
     }
     
     const addCategoryModal = () => {

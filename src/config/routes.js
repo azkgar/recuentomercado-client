@@ -22,6 +22,7 @@ import Us from "../pages/Us";
 import Contact from "../pages/Contact";
 import ConditionsTerms from "../pages/ConditionsTerms";
 import PrivacyPolicy from "../pages/PrivacyPolicy";
+import PhoneCalculator from "../pages/PhoneCalculator";
 
 //Error Page
 import Error from "../pages/Error";
@@ -145,6 +146,11 @@ const routes = [
             {
                 path: "/aviso-de-privacidad",
                 component: PrivacyPolicy,
+                exact: true
+            },
+            {
+                path: "/calculadora-telefono",
+                component: PhoneCalculator,
                 exact: true
             },
             {
