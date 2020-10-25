@@ -22,7 +22,7 @@ export default function NewsInfo(props) {
     const [categories, setCategories] = useState([]);
     const [complete, setComplete] = useState(false);
 
-    commentBox("5645109064368128-proj");
+    commentBox(process.env.REACT_APP_COMMENT_BOX);
 
     useEffect(() => {
         getPostApi(url)

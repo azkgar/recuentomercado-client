@@ -17,7 +17,7 @@ export default function AddEditPostForm(props) {
     const [userData, setUserData] = useState([]);
     const [categories, setCategories] = useState([]);
     const token = getAccessTokenApi();
-
+    
     useEffect(()=>{
         if(post){
             setPostData(post);
@@ -214,7 +214,7 @@ function AddEditForm(props) {
 
             <Form.Item>
                 <Editor
-                    apiKey = "mt7kuybeq0q9f5t5281d5rf68n924lt12oiadyukeqpjohub"
+                    apiKey = {process.env.REACT_APP_TINYMCE_API_KEY}
                     value = {postData.content ? postData.content : ""}
                     init = {{
                         selector: "textarea",
