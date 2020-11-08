@@ -8,6 +8,12 @@ import PodcastBanner from "../components/Web/PodcastBanner";
 import StocksBanner from "../components/Web/StocksBanner";
 
 export default function Home() {
+    useEffect(() =>{
+        ReactGa.initialize("UA-181332848-2");
+
+        ReactGa.pageview(window.location.pathname + window.location.search);
+    },[]);
+    
     return(
         <>
             <Helmet>

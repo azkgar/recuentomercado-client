@@ -11,6 +11,12 @@ import Fourth from "../../../assets/img/svg/undraw_growth_curve_8mqx.svg";
 import "./UsPage.scss";
 
 export default function UsPage() {
+    useEffect(() =>{
+        ReactGa.initialize("UA-181332848-2");
+
+        ReactGa.pageview(window.location.pathname + window.location.search);
+    },[]);
+    
     return(
         <>
             <Helmet>

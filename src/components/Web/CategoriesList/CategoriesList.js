@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import {getCategoriesApi} from "../../../api/category";
 import {Link} from "react-router-dom";
 import {Helmet} from "react-helmet";
+import ReactGa from "react-ga";
 import Icono from "../../../assets/img/svg/RM-logo-icono.svg";
 import Missing from "../../../assets/img/png/Missing.png";
 import Banner from "../../../assets/img/jpg/recuento-mercado-categorias.jpg";
@@ -9,6 +10,12 @@ import Banner from "../../../assets/img/jpg/recuento-mercado-categorias.jpg";
 import "./CategoriesList.scss";
 
 export default function CategoriesList() {
+    useEffect(() =>{
+        ReactGa.initialize("UA-181332848-2");
+
+        ReactGa.pageview(window.location.pathname + window.location.search);
+    },[]);
+    
     const [categories, setCategories] = useState();
 
     useEffect(() => {
@@ -18,7 +25,8 @@ export default function CategoriesList() {
             response.category.forEach(item => {
                 item.active && arrayCategories.push(item);
             });
-            setCategories(arrayCategories);
+            const orderedCategories = arrayCategories.sort();
+            setCategories(orderedCategories);
         });
     },[]);
 

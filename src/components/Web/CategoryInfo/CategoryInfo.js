@@ -14,6 +14,12 @@ import ScrollTopButton from "../ScrollTopButton";
 import "./CategoryInfo.scss";
 
 export default function CategoryInfo(props) {
+    useEffect(() =>{
+        ReactGa.initialize("UA-181332848-2");
+
+        ReactGa.pageview(window.location.pathname + window.location.search);
+    },[]);
+    
     const {tag} = props;
     const [avatar, setAvatar]= useState(null);
     const [label, setLabel] = useState(null);
@@ -31,7 +37,7 @@ export default function CategoryInfo(props) {
         if(label) {
             getRelatedPostsApi(label)
             .then(response => {
-                setPosts(response.posts);
+                setPosts(response.posts.reverse());
             });
         }
     },[label]);

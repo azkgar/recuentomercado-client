@@ -18,6 +18,7 @@ export default function Pagination(props) {
             pageSize = {posts.limit}
             onChange = {newPage => onChangePage(newPage)}
             className = "pagination"
+            showSizeChanger = {false}
         />
     );
 }

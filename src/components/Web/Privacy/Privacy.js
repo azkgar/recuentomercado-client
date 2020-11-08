@@ -5,6 +5,12 @@ import ReactGa from "react-ga";
 import "./Privacy.scss";
 
 export default function Privacy() {
+    useEffect(() =>{
+        ReactGa.initialize("UA-181332848-2");
+
+        ReactGa.pageview(window.location.pathname + window.location.search);
+    },[]);
+    
     return (
         <>
         <Helmet>

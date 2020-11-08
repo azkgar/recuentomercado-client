@@ -18,6 +18,7 @@ export default function PaginationVideos(props) {
             pageSize = {videos.limit}
             onChange = {newPage => onChangePage(newPage)}
             className = "pagination"
+            showSizeChanger = {false}
         />
     );
 }

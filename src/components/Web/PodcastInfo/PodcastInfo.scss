@@ -27,10 +27,9 @@
   animation: spin 1s linear infinite;
 }
 
-.video-info {
-  background-color: $RM-dark-green;
+.podcast-info {
+  background-color: $RM-grey;
   overflow: hidden;
-  border-bottom: solid 2px $RM-green;
   padding-top: 170px;
 
   &__body {
@@ -56,8 +55,8 @@
       margin-bottom: 40px;
       width: 200px;
       height: 56px;
-      background-color: $RM-white;
-      color: $RM-dark-green;
+      background-color: $RM-dark-green;
+      color: $RM-white;
       text-transform: uppercase;
       text-align: right;
       padding-right: 30px;
@@ -73,7 +72,7 @@
         position: absolute;
         width: 35px;
         height: 2px;
-        background-color: $RM-dark-green;
+        background-color: $RM-white;
         top: 28px;
         right: 140px;
         transition: width 0.3s ease-out;
@@ -83,7 +82,7 @@
           display: inline-block;
           width: 10px;
           height: 2px;
-          background-color: $RM-dark-green;
+          background-color: $RM-white;
           transform: rotate(-45deg);
           position: absolute;
           top: -3px;
@@ -96,7 +95,7 @@
           display: inline-block;
           width: 10px;
           height: 2px;
-          background-color: $RM-dark-green;
+          background-color: $RM-white;
           transform: rotate(45deg);
           position: absolute;
           top: 3px;
@@ -132,7 +131,7 @@
       text-align: center;
       font-size: 40px;
       margin-bottom: 50px;
-      color: $RM-white;
+      color: $RM-dark-green;
       text-transform: capitalize;
 
       @media (max-width: $s-phone) {
@@ -167,8 +166,8 @@
         font-size: 20px;
         padding: 10px 10px;
         background-color: $RM-green;
-        color: $RM-white;
         margin-bottom: 10px;
+        color: $RM-white;
         border: none;
         cursor: pointer;
         box-shadow: 0 14px 26px rgba(0, 0, 0, 0.04);
@@ -183,8 +182,9 @@
     &-date {
       font-family: $titles-font;
       font-size: 20px;
-      color: $RM-white;
-      margin-top: 35px;
+      color: $RM-dark-green;
+      margin-top: 25px;
+      margin-bottom: 20px;
       display: inline-block;
       float: right;
 
@@ -194,9 +194,9 @@
       }
     }
 
-    &-video {
+    &-podcast {
       width: 100%;
-      height: calc((100vw - 400px) / 2);
+      height: calc((100vw - 400px) / 4);
       text-align: center;
 
       @media (max-width: $s-laptop) {
@@ -210,9 +210,8 @@
 
     &-description {
       font-size: 20px;
-      color: $RM-white;
+      color: $RM-dark-green;
       font-family: $body-font;
-      margin-top: 50px;
 
       @media (max-width: $s-laptop) {
         margin-top: 100px;

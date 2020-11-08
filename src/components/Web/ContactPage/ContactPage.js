@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import {Helmet} from "react-helmet";
 import ReactGa from "react-ga";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
@@ -10,6 +10,12 @@ import Social from "../../../assets/img/svg/undraw_contact_us_15o2.svg";
 import "./ContactPage.scss";
 
 export default function ContactPage() {
+    useEffect(() =>{
+        ReactGa.initialize("UA-181332848-2");
+
+        ReactGa.pageview(window.location.pathname + window.location.search);
+    },[]);
+
     return(
         <>
             <Helmet>

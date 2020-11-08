@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import {Link} from "react-router-dom";
 import {Helmet} from "react-helmet";
 import {Row, Col} from "antd";
@@ -8,6 +8,12 @@ import Image from "../../../assets/img/svg/undraw_sunlight_tn7t.svg";
 import "./NotFound.scss";
 
 export default function NotFound(){
+    useEffect(() =>{
+        ReactGa.initialize("UA-181332848-2");
+
+        ReactGa.pageview(window.location.pathname + window.location.search);
+    },[]);
+
     return(
         <>
             <Helmet>

@@ -33,7 +33,7 @@ export default function StocksBanner(){
     
     function formatThousands(num) {
         let values = num.toString().split('.');
-        return values[0].replace(/.(?=(?:.{3})+$)/g, '$&,') + ( values.length == 2 ? '.' + values[1] : '' )
+        return values[0].replace(/.(?=(?:.{3})+$)/g, '$&,') + ( values.length === 2 ? '.' + values[1] : '' )
     }
 
     function addZeroes(num){

@@ -5,6 +5,12 @@ import ReactGa from "react-ga";
 import "./TermsConditions.scss";
 
 export default function TermsConditions() {
+    useEffect(() =>{
+        ReactGa.initialize("UA-181332848-2");
+
+        ReactGa.pageview(window.location.pathname + window.location.search);
+    },[]);
+    
     return(
         <>
         <Helmet>

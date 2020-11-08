@@ -15,6 +15,12 @@ import ScrollTopButton from "../ScrollTopButton";
 import "./NewsInfo.scss";
 
 export default function NewsInfo(props) {
+    useEffect(() =>{
+        ReactGa.initialize("UA-181332848-2");
+
+        ReactGa.pageview(window.location.pathname + window.location.search);
+    },[]);
+    
     const {url} = props;
     const [postInfo, setPostInfo] = useState(null);
     const [urlExists, setUrlExists] = useState(null);

@@ -16,6 +16,12 @@ import Banner from "../../../assets/img/jpg/recuento-mercado-videos.jpg";
 import "./VideosList.scss";
 
 export default function VideosList(props){
+    useEffect(() =>{
+        ReactGa.initialize("UA-181332848-2");
+
+        ReactGa.pageview(window.location.pathname + window.location.search);
+    },[]);
+    
     const {location,history} = props;
     const [videos, setVideos] = useState();
     const [lastVideo, setLastVideo] = useState();

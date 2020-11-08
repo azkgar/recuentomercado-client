@@ -1,0 +1,294 @@
+@import "../../../scss/index.scss";
+
+.navbar{
+    top: 0;
+    left: 0;
+
+    &__hamburguer-menu{
+        top: 0;
+        left: 0;
+    }
+}
+
+.phone-calc{
+    font-family: $body-font !important;
+    width: 100vw;
+    margin-top: 200px;
+    margin-bottom: 150px;
+    padding-left: 200px;
+    padding-right: 200px;
+    overflow: hidden;
+
+    @media (max-width: $s-laptop){
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+    @media (max-width: $s-phone){
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    h1,h2,h3,h4,h5,h6{
+        font-family: $titles-font;
+        color: $RM-dark-green;
+    }
+
+    &__image{
+        display: inline-block;
+        width: 100%;
+        img{
+            width: 100%;
+            height: auto;
+        }
+
+        @media(max-width: $s-laptop){
+            display: block;
+            width: 100%;
+        }
+    }
+    &__instructions{
+        display: inline-block;
+        padding-top: 50px;
+
+        @media(max-width: $s-laptop){
+            display: block;
+        }
+
+        h2{
+            margin-left: 30px;
+            margin-bottom: 50px;
+            font-family: $titles-font;
+            font-size: 40px;
+            color: $RM-dark-green;
+
+            @media(max-width: $s-laptop){
+                margin-left: 0;
+                text-align: center;
+            }
+
+            @media(max-width: $s-phone){
+                font-size: 35px;
+            }
+
+            @media(max-width: $s-phone-s){
+                font-size: 30px;
+            }
+
+            @media(max-width: $s-phone-xs){
+                font-size: 25px;
+            }
+        }
+
+        p{
+            font-size: 18px;
+            margin-left: 30px;
+            margin-bottom: 0;
+            width: calc(50vw - 280px);
+
+            @media (max-width: $s-laptop){
+                width: 100%;
+                margin-left: 0;
+
+            }
+
+            @media (max-width: $s-phone){
+                width: 100%;
+            }
+
+            a{
+                color: $RM-green;
+            }
+
+        }
+    }
+    &__data{
+        margin-top: 80px;
+        h3{
+            font-size: 25px;
+        }
+        &-form{
+            p{
+                display: inline-block;
+                margin-right: 10px;
+                margin-left: 10px;
+                font-size: 16px;
+                strong{
+                    color: $RM-red;
+                    font-size: 14px;
+                }
+            }
+
+            input{
+                border-color: $RM-dark-green;
+                border: 5px;
+            }
+
+            .ant-select{
+                width: 150px;
+                border-color: $RM-dark-green;
+            }
+            .calculate{
+                margin-top: 30px;
+                width:216px;
+                height: 56px;
+                background-color: $RM-dark-green;
+                color: $RM-white;
+                text-transform: uppercase;
+                font-family: $titles-font;
+                font-size: 16px;
+                cursor: pointer;
+                text-align: left;
+                padding-left: 30px;
+                border-style: none;
+                border: none;
+                outline: none;
+
+                transition: width 0.3s ease-out;
+
+                &-arrow{
+                    width: 40px;
+                    height: 2px;
+                    background-color: $RM-white;
+                    position: absolute;
+                    top: 57px;
+                    left: 140px;
+                    transition: width 0.3s ease-out;
+
+                    &:after{
+                        content: "";
+                        display: inline-block;
+                        width: 10px;
+                        height: 2px;
+                        background-color: $RM-white;
+                        transform: rotate(45deg);
+                        position: absolute;
+                        top: -3px;
+                        left: 32px;
+                        transition: left 0.3s ease-out;
+                    }
+
+                    &:before{
+                        content: "";
+                        display: inline-block;
+                        width: 10px;
+                        height: 2px;
+                        background-color: $RM-white;
+                        transform: rotate(-45deg);
+                        position: absolute;
+                        top: 3px;
+                        left: 32px;
+                        transition: left 0.3s ease-out;
+                    }
+                }
+
+                &:hover{
+                    width: 251px;
+                    transition: width 0.2s ease-in;
+        
+                    .calculate-arrow{
+                        width: 75px;
+                        transition: width 0.2s ease-in;
+        
+                        &:after{
+                            left: 67px;
+                            transition: left 0.2s ease-in;
+                        }
+        
+                        &:before{
+                            left: 67px;
+                            transition: left 0.2s ease-in;
+                        }
+                    } 
+                }
+            } 
+        } 
+    }
+    &__result{
+        &-header{
+            h3{
+                font-size: 25px;
+                margin-top: 70px;
+                color: $RM-dark-green;
+            }
+
+            p{
+                font-size: 18px;
+                margin-bottom: 30px;
+                margin-top: 20px;
+                color: $RM-dark-green;
+            }
+        }
+        &-table{
+            overflow: auto;
+            @media(max-width: $s-tablet){
+                background-color: $RM-white;
+            }
+
+            h4{
+                font-size: 20px;
+                color: $RM-dark-green;
+                margin-top: 60px;
+                margin-bottom: 30px;
+            }
+
+            .ant-table-thead{
+                font-family: $titles-font;
+            }
+
+            .ant-table-footer{
+                font-family: $titles-font;
+                font-size: 18px;
+                color: $RM-green;
+            }
+        }
+        &-tableMonths{
+            overflow: auto;
+            @media(max-width: $s-tablet){
+                background-color: $RM-white;
+            }
+        
+            h4{
+                font-size: 20px;
+                color: $RM-dark-green;
+                margin-top: 60px;
+                margin-bottom: 30px;
+            }
+
+            .ant-table-thead{
+                font-family: $titles-font;
+            }
+
+            .ant-table-footer{
+                font-family: $titles-font;
+                font-size: 18px;
+                color: $RM-green;
+            }
+        }
+        &-graph{
+            overflow: auto;
+            h4{
+                font-size: 20px;
+                color: $RM-dark-green;
+                margin-top: 60px;
+                margin-bottom: 30px;
+            }
+        }
+        &-graphMonths{
+            overflow: auto;
+            h4{
+                font-size: 20px;
+                color: $RM-dark-green;
+                margin-top: 60px;
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    .apexcharts-text tspan{
+        font-family: $subtitles-font;
+    }
+    .ant-switch-checked{
+        background-color: $RM-green;
+    }
+}

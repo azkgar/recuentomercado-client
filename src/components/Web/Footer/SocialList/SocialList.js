@@ -25,7 +25,7 @@ export default function SocialList() {
             </p>
             <p className = "footer-social__link">
                 <a
-                    href = "https://www.spotify.com"
+                    href = "https://open.spotify.com/show/2MyPjrtiplGHpuVLYxENSS"
                     target = "_blank"
                     rel = "noopener noreferrer"
                 >

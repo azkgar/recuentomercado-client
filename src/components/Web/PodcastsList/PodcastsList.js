@@ -12,6 +12,12 @@ import Banner from "../../../assets/img/jpg/recuento-mercado-podcast.jpg";
 import "./PodcastsList.scss";
 
 export default function PodcastsList(props) {
+    useEffect(() =>{
+        ReactGa.initialize("UA-181332848-2");
+
+        ReactGa.pageview(window.location.pathname + window.location.search);
+    },[]);
+    
     const {location, history} = props;
     const [podcasts, setPodcasts] = useState();
     const {page = 1} = queryString.parse(location.search);

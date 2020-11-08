@@ -18,6 +18,7 @@ export default function PaginationPodcasts(props) {
             pageSize = {podcasts.limit}
             onChange = {newPage => onChangePage(newPage)}
             className = "pagination"
+            showSizeChanger = {false}
         />
     );
 }

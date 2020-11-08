@@ -5,16 +5,15 @@ import "moment/locale/es-mx";
 import {Redirect, Link} from "react-router-dom";
 import Helmet from "react-helmet";
 import ReactGa from "react-ga";
-import ReactPlayer from "react-player";
 import {EmailShareButton, EmailIcon, FacebookShareButton, FacebookIcon, PinterestShareButton, PinterestIcon, TwitterShareButton, TwitterIcon, WhatsappShareButton, WhatsappIcon, FacebookMessengerShareButton, FacebookMessengerIcon, LinkedinShareButton, LinkedinIcon, TelegramShareButton, TelegramIcon} from "react-share";
-import {getVideoApi} from "../../../api/video";
+import {getPodcastApi} from "../../../api/podcast";
 import {getCategoryTagApi} from "../../../api/category";
 import Icono from "../../../assets/img/svg/RM-logo-icono.svg";
 import ScrollTopButton from "../ScrollTopButton";
 
-import "./VideoInfo.scss";
+import "./PodcastInfo.scss";
 
-export default function VideoInfo(props) {
+export default function PodcastInfo(props) {
     useEffect(() =>{
         ReactGa.initialize("UA-181332848-2");
 
@@ -22,14 +21,14 @@ export default function VideoInfo(props) {
     },[]);
     
     const {url} = props;
-    const [videoInfo, setVideoInfo] = useState(null);
+    const [podcastInfo, setPodcastInfo] = useState(null);
     const [urlExists, setUrlExists] = useState(null);
-    const socialUrl = "https://recuentomercado.com/videos/";
+    const socialUrl = "https://recuentomercado.com/podcast/";
     const [categories, setCategories] = useState([]);
     const [complete, setComplete] = useState(false);
 
     useEffect(() => {
-        getVideoApi(url)
+        getPodcastApi(url)
         .then( response => {
             if(response.code === 404) {
                 setUrlExists(false);
@@ -37,7 +36,7 @@ export default function VideoInfo(props) {
             else if(response.code !== 200) {
                 notification["warning"]({message: response.code});
             } else {
-                setVideoInfo(response.video);
+                setPodcastInfo(response.podcast);
             }
         })
         .catch(() => {
@@ -47,11 +46,11 @@ export default function VideoInfo(props) {
 
     useEffect(() => {
         const categoriesArray = [];
-        if(videoInfo){
-            if(videoInfo.categories.length === 0) {
+        if(podcastInfo){
+            if(podcastInfo.categories.length === 0) {
                 setCategories(null);
             } else {
-                videoInfo.categories.map( tag => {
+                podcastInfo.categories.map( tag => {
                     getCategoryTagApi(tag)
                     .then( response => {
                         categoriesArray.push({
@@ -60,18 +59,18 @@ export default function VideoInfo(props) {
                             url: response.category[0].url
                         });
                         setCategories(categoriesArray);
-                        if(categoriesArray.length === videoInfo.categories.length){
+                        if(categoriesArray.length === podcastInfo.categories.length){
                             setComplete(true);
                         }
                     });
                 });
             }
         }
-    },[videoInfo]);
+    },[podcastInfo]);
 
     if(urlExists === false) {
         return <Redirect to = "/not-found"/>
-    } else if (!videoInfo) {
+    } else if (!podcastInfo) {
         return(
             <img
                 className = "logo-spin"
@@ -84,22 +83,22 @@ export default function VideoInfo(props) {
     return(
         <>
         <Helmet>
-            <title> {videoInfo.title} | El Recuento del Mercado</title>
+            <title> {podcastInfo.title} | El Recuento del Mercado</title>
             <meta 
                 name = "description" 
-                content =  {videoInfo.description}
+                content =  {podcastInfo.description}
             />
             <link 
                 rel = "canonical" 
-                href = {`https://recuentomercado.com/videos/${videoInfo.url}`}
+                href = {`https://recuentomercado.com/videos/${podcastInfo.url}`}
             />
             <meta 
                 property = "og:title" 
-                content =  {`${videoInfo.title} | El Recuento del Mercado`}
+                content =  {`${podcastInfo.title} | El Recuento del Mercado`}
             />
             <meta 
                 property = "og:description" 
-                content =  {videoInfo.description}
+                content =  {podcastInfo.description}
             />
             <meta 
                 property = "og:locale" 
@@ -111,11 +110,11 @@ export default function VideoInfo(props) {
             />
             <meta 
                 property = "og:image" 
-                content = {videoInfo.cover} 
+                content = {podcastInfo.cover} 
             />
             <meta 
                 property = "og:image:secure_url" 
-                content = {videoInfo.cover} 
+                content = {podcastInfo.cover} 
             />
             <meta 
                 property = "og:image:type" 
@@ -131,26 +130,26 @@ export default function VideoInfo(props) {
             />
             <meta 
                 property = "og:image:alt" 
-                content = {videoInfo.title} 
+                content = {podcastInfo.title} 
             />
             <meta 
                 property = "og:site_name" 
                 content = "El Recuento del Mercado" 
             />
         </Helmet>
-        <div className = "video-info">
+        <div className = "podcast-info">
             <ScrollTopButton/>
-            <div className = "video-info__body">
-                <Link to = "/videos">
-                    <button className = "video-info__body-return">
-                        <div className = "video-info__body-return-arrow"></div>
+            <div className = "podcast-info__body">
+                <Link to = "/podcast">
+                    <button className = "podcast-info__body-return">
+                        <div className = "podcast-info__body-return-arrow"></div>
                         Regresar
                     </button>
                 </Link>
-                <h1 className = "video-info__body-title">
-                    {videoInfo.title}
+                <h1 className = "podcast-info__body-title">
+                    {podcastInfo.title}
                 </h1>
-                <div className = "video-info__body-tags">
+                <div className = "podcast-info__body-tags">
                     {
                         categories.map(category => {
                             if(complete){
@@ -159,66 +158,59 @@ export default function VideoInfo(props) {
                                         to = {`/categorias/${category.url}`}
                                         key = {category.tag}
                                     >
-                                        <Tag className = "video-info__body-tags-item">{category.tag}</Tag>
+                                        <Tag className = "podcast-info__body-tags-item">{category.tag}</Tag>
                                     </Link>
                                 );
                             }
                         })
                     }
                 </div>
-                <div className = "video-info__body-date">
+                <div className = "podcast-info__body-date">
                     <p>
-                        {moment(videoInfo.date).local("es-mx").format("LL")}
+                        {moment(podcastInfo.date).local("es-mx").format("LL")}
                     </p>
                 </div>
-                <div className = "video-info__body-video">
-                    <ReactPlayer 
-                        url = {videoInfo.link}
-                        controls = "true"
-                        width = "100%"
-                        height = "100%"
-                        pip = "true"
-                        stopOnUnmount = "false"
-                    />
+                <div className = "podcast-info__body-podcast">
+                    <iframe src={`${podcastInfo.link}?theme=custom&primary=00d762&background=061f1f`} frameBorder="0" width="100%" height="220px" allow="autoplay"></iframe>
                 </div>
-                <p className = "video-info__body-description">
-                    {videoInfo.description}
+                <p className = "podcast-info__body-description">
+                    {podcastInfo.description}
                 </p>
-                <div className = "video-info__social">
-                    <h3 className = "video-info__social-title">
-                        Comparte el video
+                <div className = "podcast-info__social">
+                    <h3 className = "podcast-info__social-title">
+                        Comparte el podcast
                     </h3>
                     <EmailShareButton
                         url = {`${socialUrl}${url}`}
-                        subject = {videoInfo.title}
-                        body = {`Mira el video ${videoInfo.title} en: `}
+                        subject = {podcastInfo.title}
+                        body = {`Escucha: ${podcastInfo.title} en: `}
                     >
                         <EmailIcon/>
                     </EmailShareButton>
                     <FacebookShareButton
                         url = {`${socialUrl}${url}`}
-                        quote = {`Mira el video: ${videoInfo.title}`}
+                        quote = {`Escucha: ${podcastInfo.title}`}
                         hashtag = "#ElRecuentoDelMercado"
                     >
                         <FacebookIcon/>
                     </FacebookShareButton>
                     <PinterestShareButton
                         url = {`${socialUrl}${url}`}
-                        media = {videoInfo.cover}
-                        description = {videoInfo.description}
+                        media = {podcastInfo.cover}
+                        description = {podcastInfo.description}
                     >
                         <PinterestIcon/>
                     </PinterestShareButton>
                     <TwitterShareButton
                         url = {`${socialUrl}${url}`}
-                        title = {`Mira el video: ${videoInfo.title}`}
+                        title = {`Escucha: ${podcastInfo.title}`}
                         hashtags = {["ElRecuentoDelMercado"]}
                     >
                         <TwitterIcon/>
                     </TwitterShareButton>
                     <WhatsappShareButton
                         url = {`${socialUrl}${url}`}
-                        title = {`Mira el video: ${videoInfo.title}`}
+                        title = {`Escucha: ${podcastInfo.title}`}
                     >
                         <WhatsappIcon/>
                     </WhatsappShareButton>
@@ -229,15 +221,15 @@ export default function VideoInfo(props) {
                     </FacebookMessengerShareButton>
                     <LinkedinShareButton
                         url = {`${socialUrl}${url}`}
-                        title = {`Mira el video: ${videoInfo.title}`}
-                        summary = {videoInfo.description}
+                        title = {`Escucha: ${podcastInfo.title}`}
+                        summary = {podcastInfo.description}
                         source = {socialUrl}
                     >
                         <LinkedinIcon/>
                     </LinkedinShareButton>
                     <TelegramShareButton
                         url = {`${socialUrl}${url}`}
-                        title = {`Mira el video: ${videoInfo.title}`}
+                        title = {`Escucha: ${podcastInfo.title}`}
                     >
                         <TelegramIcon/>
                     </TelegramShareButton>

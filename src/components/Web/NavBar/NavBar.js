@@ -142,7 +142,7 @@ export default function NavBar(){
                     </li>
                     <li className = {showTextSocial}>
                         <a
-                            href = "https://www.spotify.com"
+                            href = "https://open.spotify.com/show/2MyPjrtiplGHpuVLYxENSS"
                             rel = "noopener noreferrer"
                             target = "_blank"
                         >

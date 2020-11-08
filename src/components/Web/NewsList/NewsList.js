@@ -15,6 +15,12 @@ import Banner from "../../../assets/img/jpg/recuento-mercado-articulos.jpg";
 import "./NewsList.scss";
 
 export default function NewsList(props){
+    useEffect(() =>{
+        ReactGa.initialize("UA-181332848-2");
+
+        ReactGa.pageview(window.location.pathname + window.location.search);
+    },[]);
+    
     const {location, history} = props;
     const [posts, setPosts] = useState();
     const {page = 1} = queryString.parse(location.search);
