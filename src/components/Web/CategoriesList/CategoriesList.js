@@ -7,6 +7,7 @@ import Icono from "../../../assets/img/svg/RM-logo-icono.svg";
 import Missing from "../../../assets/img/png/Missing.png";
 import Aprende from "../../../assets/img/jpg/recuento-mercado-aprende.jpg";
 import Banner from "../../../assets/img/jpg/recuento-mercado-categorias.jpg";
+import ScrollTopButton from "../ScrollTopButton";
 
 import "./CategoriesList.scss";
 
@@ -103,6 +104,7 @@ export default function CategoriesList() {
                 />
             </Helmet>
             <div className = "categories-cover">
+            <ScrollTopButton/>
                 <img
                     alt = "Categorías"
                     src = {Banner}
