@@ -5,6 +5,7 @@ import {Helmet} from "react-helmet";
 import ReactGa from "react-ga";
 import Icono from "../../../assets/img/svg/RM-logo-icono.svg";
 import Missing from "../../../assets/img/png/Missing.png";
+import Aprende from "../../../assets/img/jpg/recuento-mercado-aprende.jpg";
 import Banner from "../../../assets/img/jpg/recuento-mercado-categorias.jpg";
 
 import "./CategoriesList.scss";
@@ -106,6 +107,14 @@ export default function CategoriesList() {
                     alt = "Categorías"
                     src = {Banner}
                 />
+            </div>
+            <div className = "categories-learn">
+                <Link to = "/categorias/aprende">
+                    <img
+                        alt = "Aprende"
+                        src = {Aprende}
+                    />
+                </Link>
             </div>
             <div className = "categories-list">
                 <h2 className = "categories-list__title">

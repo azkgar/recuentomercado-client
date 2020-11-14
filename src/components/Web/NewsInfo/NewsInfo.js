@@ -6,6 +6,7 @@ import {Redirect, Link} from "react-router-dom";
 import {Helmet} from "react-helmet";
 import ReactGa from "react-ga";
 import {EmailShareButton, EmailIcon, FacebookShareButton, FacebookIcon, PinterestShareButton, PinterestIcon, TwitterShareButton, TwitterIcon, WhatsappShareButton, WhatsappIcon, FacebookMessengerShareButton, FacebookMessengerIcon, LinkedinShareButton, LinkedinIcon, TelegramShareButton, TelegramIcon} from "react-share";
+import {DiscussionEmbed} from "disqus-react";
 import commentBox from "commentbox.io";
 import {getPostApi} from "../../../api/post";
 import {getCategoryTagApi} from "../../../api/category";
@@ -28,7 +29,7 @@ export default function NewsInfo(props) {
     const [categories, setCategories] = useState([]);
     const [complete, setComplete] = useState(false);
 
-    commentBox(process.env.REACT_APP_COMMENT_BOX);
+    //commentBox(process.env.REACT_APP_COMMENT_BOX);
 
     useEffect(() => {
         getPostApi(url)
@@ -268,7 +269,18 @@ export default function NewsInfo(props) {
                 </TelegramShareButton>
             </div>
             <div className = "post-info__comments">
-                   <div className = "commentbox"/>
+                   {/*<div className = "commentbox"/>*/}
+                <DiscussionEmbed
+                    shortname = {process.env.REACT_APP_DISQUS}
+                    config = {
+                        {
+                            url: `https://recuentomercado.com/articulos/${postInfo.url}`,
+                            identifier: postInfo._id,
+                            title: postInfo.title,
+                            language: "es_MX"
+                        }
+                    }
+                />
             </div>
         </div>
         </>
